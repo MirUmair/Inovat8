@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Bauhaus';
+  src: url('../assets/fonts/BauhausStd-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Bauhaus2';
+  src: url('../assets/fonts/BauhausStd-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
