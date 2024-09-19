@@ -1,0 +1,57 @@
+/* Reasons Section */
+.reasons-section {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.reasons-section h3 {
+  font-family: 'Bauhaus';
+  color: #203965;
+  font-size: 2em;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.reason {
+  padding: 20px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-50px); /* Initially offscreen */
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* Slide in to the correct position */
+}
+
+.reason h4 {
+  color: #001d3d;
+  font-family: 'Bauhaus';
+}
+
+.reason p {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,101 @@
+.project-page-container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #2A2A2A;
+    background-color: #fff;
+}
+.page-header {
+    text-align: left;
+}
+.page-header h1 {
+    color: #022D62;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.page-header h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #022D62;
+}
+.page-header p {
+    font-size: 16px;
+    color: #555;
+}
+.journey-section {
+    margin-top: 40px;
+    text-align: left;
+    color: #022D62;
+}
+.journey-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+.journey-btn {
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 2px solid #888;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: #022D62;
+}
+.journey-btn:hover {
+    background-color: #F0F0F0;
+}
+.journey-btn.active {
+    border-color: #022D62;
+    color: #888;
+}
+.discovery-call {
+    margin-top: 40px;
+    text-align: left;
+    color: #022D62;
+}
+.talk-button {
+    padding: 12px 30px;
+    background: #022D62;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 30px;
+}
+.call-details {
+    display: flex;
+}
+.icon {
+    width: 44px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.detail-box {
+    flex: 1;
+    text-align: left;
+}
+.detail-box p {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #022D62;
+}
+.detail-box span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-left: 60px;
+}
+.detail-box .icon {
+    margin-right: 10px;
+}
+.detail-box:first-child {
+    margin-left: 0;
+}
+.detail-box:last-child {
+    margin-right: 0;
+}

@@ -1,0 +1,165 @@
+/* Define the font-face */
+@font-face {
+  font-family: 'BauhausStd-Light';
+  src: url('../assets/fonts/BauhausStd-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+/* Global styles for full-height elements and background */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(to bottom right, #000000, #3533CD); */
+  font-family: 'BauhausStd-Light';
+  /* Add fallback fonts */
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #000000, #3533CD);
+  /* Navbar at the top, content below */
+}
+
+.scrollable-content {
+  height: 100%;
+  overflow-y: scroll;
+  /* Enable scrolling but hide scrollbar */
+}
+
+/* Hide scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollable-content {
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For IE and Edge */
+}
+ 
+ 
+
+/* Content styling */
+.content {
+  display: flex;
+  justify-content: space-between;
+ }
+
+/* Content styling */
+.textcontent {
+  display: flex;
+  margin-left: 6%;
+  margin-bottom: 3vw;
+}
+
+.textbottom {
+  font-size: 1.5vw;
+  color: white;
+  font-family: 'BauhausStd-Light';
+}
+
+.textbottom1 {
+  font-size: 1.5vw;
+  color: white;
+  font-family: 'Bauhaus';
+  margin-left: 1rem
+}
+
+/* Keyframes for text animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* Text animation and styling */
+.animateIn {
+  text-align: left;
+  font-size: 2rem;
+  /* Use rem units for better scaling */
+  color: white;
+  font-family: 'Bauhaus', sans-serif;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in;
+  padding: 5%;
+}
+
+.animateIn.show {
+  opacity: 1;
+  animation: slideIn 1s ease-in forwards;
+}
+
+/* Lightbulb image styling */
+.image {
+  max-width: 20vw;
+  height: 20vw;
+  padding: 4vw;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .animateIn {
+    font-size: 3rem;
+  }
+
+  .image {
+    max-width: 30vw;
+  }
+}
+
+/* Text animation and styling */
+.text {
+  text-align: left;
+  font-size: 3.5vw;
+  color: white;
+  font-family: 'Bauhaus', sans-serif;
+  font-weight: bold;
+  padding: 5%;
+  opacity: 0;
+  transform: translateX(10px);
+   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.text.show {
+  opacity: 1;
+  transform: translateX(10);
+  /* Move to normal position */
+}
+
+.text.hide {
+  opacity: 0;
+  transform: translateX(-30px);
+  /* Move text up to hide */
+}
+
+/* Media query for extra small screens */
+@media (max-width: 480px) {
+  .animateIn {
+    font-size: 4rem;
+  }
+
+  .image {
+    max-width: 40vw;
+  }
+}
+
+/* Paragraph font settings */
+p {
+  font-family: 'Bauhaus2', sans-serif;
+}
