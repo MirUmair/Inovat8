@@ -8,7 +8,7 @@ const BottomPage = () => {
         threshold: 0.1,    // Trigger when 10% of the component is visible
       });
     // State to manage which section is active
-    const [activeSection, setActiveSection] = useState(null);
+    const [activeSection, setActiveSection] = useState('discovery');
     // Function to set active section
     const handleSectionClick = (section) => {
         setActiveSection(section);
