@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-    //
+import { useInView } from 'react-intersection-observer';
 import '../styles/BottomPage.css';
 import images from '../assets/images';
 const BottomPage = () => {
+    const { ref, inView } = useInView({
+        triggerOnce: true, // Trigger animation only once
+        threshold: 0.1,    // Trigger when 10% of the component is visible
+      });
     // State to manage which section is active
     const [activeSection, setActiveSection] = useState(null);
     // Function to set active section
@@ -12,10 +16,10 @@ const BottomPage = () => {
     return (
         <div className="project-page-container">
             <header className="page-header">
-                <h1>Excited to Hear About Your Project!</h1>
+                <h1 >— Excited to Hear About Your Project!</h1>
                 <h2>What Are You Working On?</h2>
                 <p>
-                    We're passionate about driving innovation in your business.
+                    We're passionate about driving innovation in your<br />business.
                     Let's talk and turn your ideas into reality.
                 </p>
             </header>
@@ -65,21 +69,33 @@ const BottomPage = () => {
                 <section className="discovery-call">
                     <div className="discovery-content">
                         <div className="call-details">
-                            <div className="detail-box">
+                            <div className="detail-box1">
                                 <p>Discovery Call</p>
                                 <button className="talk-button">Let’s Talk</button>
                             </div>
                             <div className="detail-box">
-                                <p><img src={images.phone} alt="Clock Icon" className="icon" /> CALL DURATION</p>
-                                <span>40-45 Minutes</span>
+                                <img src={images.phone} alt="Clock Icon" className="icon" />
+                                <div>
+                                    <p> CALL DURATION</p>
+                                    <span>40-45 Minutes</span>
+                                </div>
+
                             </div>
                             <div className="detail-box">
-                                <p><img src={images.people} alt="Team Members" className="icon" /> Team</p>
-                                <span>Client Partner and<br /> Technology Partner</span>
+                                <img src={images.people} alt="Team Members" className="icon" />
+                                <div>
+                                    <p>Team</p>
+                                    <span>Client Partner and<br /> Technology Partner</span>
+                                </div>
+
                             </div>
                             <div className="detail-box">
-                                <p><img src={images.people} alt="Team Members" className="icon" /> Team</p>
-                                <span>Comprehensive<br /> requirement assets:<br /> Problem and Solution<br /> Statement, User Analysis,<br /> Use Case Diagram, and<br /> Business Data Model.</span>
+                                <img src={images.people} alt="Team Members" className="icon" />
+                                <div>
+                                    <p>Team</p>
+                                    <span>Comprehensive<br /> requirement assets:<br /> Problem and Solution<br /> Statement, User Analysis,<br /> Use Case Diagram, and<br /> Business Data Model.</span>
+
+                                </div>
                             </div>
                         </div>
                     </div>

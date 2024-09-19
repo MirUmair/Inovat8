@@ -15,25 +15,45 @@ body {
   font-family: 'BauhausStd-Light';
   /* Add fallback fonts */
 }
+
 /* Scrollable content wrapper */
 .scrollable-content {
-  overflow-y: scroll; /* Allows vertical scrolling */
-  height: 100vh; /* Full height of the viewport */
+  overflow-y: scroll;
+  /* Allows vertical scrolling */
+  height: 100vh;
+  /* Full height of the viewport */
 }
 
 /* General styles for the entire app */
 body {
   margin: 0;
   padding: 0;
- }
+}
 
- 
-h1, h2, h3, h4 {
+button {
   margin: 0;
   padding: 0;
-  font-family: 'BauhausStd-Bold';
-
+  color: #022d62;
+  font-family: 'BauhausStd-Light';
+  font-size: small;
 }
+
+p {
+  color: #022d62;
+  font-family: 'BauhausStd-Light';
+  font-size: small;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bauhaus';
+  color: #022d62;
+}
+
 .App {
   height: 100%;
   display: flex;
@@ -51,13 +71,10 @@ h1, h2, h3, h4 {
 ::-webkit-scrollbar {
   display: none;
 }
+
 .scrollable-content {
   scrollbar-width: none;
   /* For Firefox */
   -ms-overflow-style: none;
   /* For IE and Edge */
 }
- 
- 
- 
- 

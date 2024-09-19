@@ -3,99 +3,161 @@
     font-family: 'Arial', sans-serif;
     color: #2A2A2A;
     background-color: #fff;
+    padding-left: 3%;
+    padding-right: 3%;
+    box-shadow: 5px 5px 10px rgb(230, 240, 244) inset;
+
 }
+
 .page-header {
     text-align: left;
 }
+
 .page-header h1 {
     color: #022D62;
     font-size: 32px;
     margin-bottom: 10px;
 }
+
 .page-header h2 {
-    font-size: 24px;
+    font-size: 30px;
     margin-top: 10px;
+    margin-left: 4%;
+
     color: #022D62;
+    font-family: 'BauhausStd-Light';
 }
+
 .page-header p {
     font-size: 16px;
-    color: #555;
+    margin-left: 4%;
 }
+
 .journey-section {
     margin-top: 40px;
     text-align: left;
     color: #022D62;
+    margin-left: 4%;
 }
+
 .journey-buttons {
     display: flex;
     justify-content: flex-start;
     gap: 15px;
     margin-top: 20px;
 }
+
 .journey-btn {
     padding: 10px 30px;
     border-radius: 30px;
     border: 2px solid #888;
     background: transparent;
-    font-size: 16px;
+    font-size: small;
     cursor: pointer;
     transition: background 0.3s ease;
     color: #022D62;
 }
+
 .journey-btn:hover {
     background-color: #F0F0F0;
 }
+
 .journey-btn.active {
     border-color: #022D62;
-    color: #888;
+    color: #022D62;
+    font-size: small;
+    font-family: 'Bauhaus';
 }
+
 .discovery-call {
     margin-top: 40px;
     text-align: left;
     color: #022D62;
+    font-size: small;
+    margin-left: 4%;
+    margin-Right: 4%;
+
 }
+
 .talk-button {
-    padding: 12px 30px;
+    padding: 12px 20px;
     background: #022D62;
+    font-family: 'Bauhaus';
+
     color: white;
     font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    margin-bottom: 30px;
+    margin-top: 25px;
 }
+
 .call-details {
     display: flex;
-}
+ }
+
 .icon {
     width: 44px;
-    height: auto;
+    height: 44px;
     margin-right: 10px;
-    vertical-align: middle;
 }
+
 .detail-box {
+    flex: 1;
+    display: flex;
+    text-align: left;
+}
+
+.detail-box1 {
     flex: 1;
     text-align: left;
 }
+
 .detail-box p {
     display: flex;
-    align-items: center;
     font-weight: bold;
-    margin-bottom: 0;
     color: #022D62;
+
 }
+
+.detail-box1 p {
+    display: flex;
+    font-family: 'Bauhaus';
+font-size: large;
+}
+
+.detail-box div p {
+    margin: 0;
+    font-family: 'Bauhaus';
+    font-size: large;
+
+}
+
+.detail-box div span {
+    margin-top: 0.6vw;
+
+}
+.detail-box div{
+    margin-top: 1.5vw;
+
+}
+
 .detail-box span {
     display: block;
     font-size: 14px;
-    color: #555;
-    margin-left: 60px;
+    color: #022D62;
 }
+
 .detail-box .icon {
     margin-right: 10px;
+    margin-top: 1.5vw;
+
 }
+
 .detail-box:first-child {
     margin-left: 0;
 }
+
 .detail-box:last-child {
     margin-right: 0;
 }
