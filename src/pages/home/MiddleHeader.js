@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
-import '../styles/MiddleHeader.css'; // Import your CSS file
+import '../../styles/MiddleHeader.css'; // Import your CSS file
 import "slick-carousel/slick/slick.css"; // Import the core slick carousel styles
 import "slick-carousel/slick/slick-theme.css";
-import images from '../assets/images';
+import images from '../../assets/images';
 
 const HeaderPage = () => {
     const sliderSettings = {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import '../styles/BottomPage.css';
-import images from '../assets/images';
+import '../../styles/BottomPage.css';
+import images from '../../assets/images';
 const BottomPage = () => {
     const { ref, inView } = useInView({
         triggerOnce: true, // Trigger animation only once

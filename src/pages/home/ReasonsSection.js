@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import '../styles/ReasonsSection.css'; // Import your CSS file
+import '../../styles/ReasonsSection.css'; // Import your CSS file
 
 const Reason = ({ title, description, delay }) => {
   const { ref, inView } = useInView({

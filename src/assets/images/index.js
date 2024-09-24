@@ -8,9 +8,13 @@ import icon6 from './6.webp';
 import icon7 from './7.webp';
 import icon8 from './8.png';
 import icon9 from './9.png'; 
-import people from './people (2).png'; 
+import people from './people.png'; 
 import phone from './phone.png'; 
-
+import plane from './plane.png'; 
+import lightbulb1 from './lightbulb-on.png';
+import lightbulb2 from './bulb.svg';
+import lightbulb3 from './lightbulb-on.png';
+import lightbulb4 from './bulb.svg';
 
  
 
@@ -27,5 +31,6 @@ export default {
     icon8,
     icon9,
     people,
-    phone
+    phone,
+    plane,lightbulb1,lightbulb2,lightbulb3,lightbulb4
 };

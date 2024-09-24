@@ -1,11 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../styles/HeaderPage.css'; // Import your CSS file
-import lightbulb1 from '../assets/images/lightbulb-on.png';
-import lightbulb2 from '../assets/images/bulb.svg';
-import lightbulb3 from '../assets/images/lightbulb-on.png';
-import lightbulb4 from '../assets/images/bulb.svg';
-import Navbar from '../components/Navbar'; // Adjusted import path
-
+import '../../styles/HeaderPage.css'; // Import your CSS file
+ 
+import Navbar from '../../components/Navbar'; // Adjusted import path
+import image from '../../assets/images';
 const Header = () => {
     const texts = [
         'Shaping the Future with Technology & Innovation.',
@@ -14,7 +11,7 @@ const Header = () => {
         'Simplify the Dev Journey, Maximize Efficiency',
     ];
 
-    const images = [lightbulb1, lightbulb2, lightbulb3, lightbulb4]; // Array of images corresponding to texts
+    const images = [image.lightbulb1, image.lightbulb2, image.lightbulb3, image.lightbulb4]; // Array of images corresponding to texts
 
     // State to track current text index and animation state
     const [currentText, setCurrentText] = useState(0);
