@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Navbar.css';
 import logo from '../assets/images/Innovat8.svg';
-
+import images from '../assets/images';
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -11,17 +11,20 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <img src={logo} alt="Innovat8 Logo" className="logo" />
-      
+      {/* <div className="background"> */}
+        <img src={logo} alt="Innovat8 Logo" className="logo" />
+
+      {/* </div> */}
+
       <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
-      
+
       <ul className={`nav-list ${menuOpen ? 'active' : ''}`}>
         <li className="nav-item">About Us</li>
-        
+
         <li className="nav-item dropdown-container">
           Services <span className="arrow">▼</span>
           <ul className="dropdown">

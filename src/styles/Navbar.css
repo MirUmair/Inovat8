@@ -1,7 +1,7 @@
 /* Navbar styles */
 .navbar {
     background-color: transparent;
-    padding: 20px 5%;
+    padding: 10px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,6 +12,20 @@
 .logo {
     max-width: 13vw;
 }
+
+.bg {
+    max-width: 13vw;
+    opacity: 0.2;
+}
+
+.background {
+    background-image: url('/src/assets/images/TopBackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 10vh;
+  }
 
 /* Hamburger menu for mobile */
 .hamburger {

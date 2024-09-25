@@ -18,8 +18,6 @@ body {
 
 .App {
   height: 100%;
-  display: flex;
-  flex-direction: column;
   background: linear-gradient(to bottom right, #000000, #3533CD);
   /* Navbar at the top, content below */
 }
@@ -41,14 +39,14 @@ body {
   -ms-overflow-style: none;
   /* For IE and Edge */
 }
- 
- 
 
 /* Content styling */
 .content {
   display: flex;
   justify-content: space-between;
- }
+  height: 70vh;
+  width: 95vw;
+  }
 
 /* Content styling */
 .textcontent {
@@ -58,13 +56,14 @@ body {
 }
 
 .textbottom {
-  font-size: 1.5vw;
+  font-size: 2vw;
+  margin-left: 1vw;
   color: white;
   font-family: 'BauhausStd-Light';
 }
 
 .textbottom1 {
-  font-size: 1.5vw;
+  font-size: 2vw;
   color: white;
   font-family: 'Bauhaus';
   margin-left: 1rem
@@ -102,10 +101,9 @@ body {
 
 /* Lightbulb image styling */
 .image {
-  max-width: 20vw;
-  height: 20vw;
-  padding: 4vw;
-}
+  max-width: 35vw;
+  height: 35vw;
+ }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
@@ -126,15 +124,20 @@ body {
 /* Text animation and styling */
 .text {
   text-align: left;
-  font-size: 3.5vw;
+  font-size: 4.0vw;
   color: white;
   font-family: 'Bauhaus', sans-serif;
   font-weight: bold;
-  padding: 5%;
   opacity: 0;
   transform: translateX(10px);
-   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
+
+.contentText {
+  margin-left: 5vw;
+  padding-top: 10vh;
+  height: 50vh;
+ }
 
 .text.show {
   opacity: 1;

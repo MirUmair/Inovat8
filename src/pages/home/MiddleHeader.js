@@ -6,14 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import images from '../../assets/images';
 
 const HeaderPage = () => {
-    const sliderSettings = {
-        dots: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplaySpeed: 4000,
-    };
-
+   
     const [currentIndex, setCurrentIndex] = useState(0);
     const sliderRef = useRef(null);
 
@@ -87,6 +80,11 @@ const HeaderPage = () => {
                     <img src={images.icon7} alt="ZTE Logo" />
                     <img src={images.icon8} alt="Huawei Logo" />
                     <img src={images.icon9} alt="ZTE Logo" />
+                    <img src={images.icon10} alt="Zong Logo" />
+                    <img src={images.icon11} alt="Huawei Logo" />
+                    <img src={images.icon12} alt="ZTE Logo" />
+                    <img src={images.icon13} alt="Huawei Logo" />
+                    <img src={images.icon14} alt="ZTE Logo" />
                 </div>
             </section>
 
@@ -97,7 +95,7 @@ const HeaderPage = () => {
             >
                 <div className="offer-text">
                     <h3>Global Center of <span>INNOVATION</span></h3>
-                    <h4>OUR SERVICES</h4>
+                    <h5>— OUR SERVICES</h5>
                     <h2>What We Offer</h2>
                     <p>
                         Our services prioritize strategy and transparency as fundamental elements. Our objective is to enable you to expand your business by eliminating technological obstacles and providing comprehensive support throughout the project's lifecycle.

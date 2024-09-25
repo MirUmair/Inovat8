@@ -7,14 +7,13 @@
 .trusted-logos {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 2px;
+  background-color: #fff;
   flex-wrap: wrap;
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.trusted-logos img {
-  max-height: 50px;
-}
 
 .innovation-section {
   display: flex;
@@ -94,9 +93,9 @@
 
 .slide {
   width: 10vw;
-   padding: 10px;
+  padding: 10px;
   text-align: left;
- }
+}
 
 .slide h3 {
   color: #001d3d;
@@ -143,7 +142,7 @@ button:hover {
 button:focus {
   outline: none;
 }
- 
+
 .controls {
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
@@ -151,9 +150,9 @@ button:focus {
 
 /* General container for the slider and controls */
 .slider-wrapper {
-  
+
   width: 50%;
- }
+}
 
 /* Styling the control buttons to be outside the card */
 .control {
@@ -168,12 +167,12 @@ button:focus {
 }
 
 .control.prev {
-    border-width: 10rem;
+  border-width: 10rem;
   border-color: #0b4b5c;
 }
 
 .control.next {
-   border-width: 1rem;
+  border-width: 1rem;
   border-color: #1CB5E0;
 }
 
@@ -181,7 +180,7 @@ button:focus {
   color: #104351;
 }
 
- 
+
 
 .slider {
   display: flex;
@@ -248,7 +247,10 @@ button:focus {
 }
 
 /* Trusted By and What We Offer Sections */
-.trusted-by-section,
+.trusted-by-section {
+  background-color: '#fff';
+}
+
 .innovation-section {
   opacity: 0;
   transform: translateX(-50px);
@@ -266,22 +268,9 @@ button:focus {
   /* Start hidden and slightly below */
 }
 
-.trusted-by-title h2,
-.offer-text h3,
-.offer-text h4,
-.offer-text h2 {
-  padding-top: 1vw;
-  /* Add any specific styles for headings */
-}
 
-/* Additional styling for Trusted By section */
-.trusted-logos img {
-  width: 100px;
-  height: auto;
-  margin: 10px;
-}
 
- 
+
 .slider {
   display: flex;
   transition: transform 0.5s ease;
@@ -302,8 +291,8 @@ button:focus {
 
 .btnContainer {
   display: flex;
-   width: 10vw;
- }
+  width: 10vw;
+}
 
 /* Trusted By and What We Offer Sections */
 .trusted-by-section,
@@ -324,23 +313,21 @@ button:focus {
   /* Start hidden and slightly below */
 }
 
-.trusted-by-title h2,
-.offer-text h3,
-.offer-text h4,
-.offer-text h2 {
-  /* Add any specific styles for headings */
-}
+
 
 /* Additional styling for Trusted By section */
 .trusted-logos img {
   width: 100px;
   height: auto;
   margin: 10px;
+  width: 5vw;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 /* Additional styling for What We Offer section */
 .slider-container {
-   background-color: #f0f0f0;
+  background-color: #f0f0f0;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(21, 20, 20, 0.2);
@@ -401,36 +388,21 @@ button:focus {
 
 /* Trusted By Section */
 .trusted-by-section {
-  background-color: #f5f5f5;
-  /* Light background color */
-  padding-left: 2vw;
+  background-color: #fff;
+   padding-left: 2vw;
+  padding-top: 1vh;
 }
 
-.trusted-by-title {}
-
+ 
 .trusted-by-title h2 {
   font-family: 'Bauhaus';
   color: #203965;
   font-size: 2em;
 }
 
-.trusted-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding-bottom: 3vw;
-  /* Ensures logos wrap on smaller screens */
-}
 
-.trusted-logos img {
-  max-height: 40px;
-  /* Restrict logo height */
-  object-fit: contain;
-  margin: 10px 10px;
-  transition: transform 0.3s ease;
-}
+
+
 
 .trusted-logos img:hover {
   transform: scale(1.1);

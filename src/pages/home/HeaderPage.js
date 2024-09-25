@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../../styles/HeaderPage.css'; // Import your CSS file
- 
+
 import Navbar from '../../components/Navbar'; // Adjusted import path
 import image from '../../assets/images';
 const Header = () => {
@@ -10,8 +10,14 @@ const Header = () => {
         'Extract, Connect & Make Sense of Complex Data.',
         'Simplify the Dev Journey, Maximize Efficiency',
     ];
+    const text2 = [
+        '',
+        'AI/ML is at the core of everything we do.',
+        'Boost competitiveness with AI integration.',
+        'Innovate with MENDIX: 10X faster enterprise solutions',
+    ];
 
-    const images = [image.lightbulb1, image.lightbulb2, image.lightbulb3, image.lightbulb4]; // Array of images corresponding to texts
+    const images = [image.lightbulb1, '', image.lightbulb3, image.lightbulb4]; // Array of images corresponding to texts
 
     // State to track current text index and animation state
     const [currentText, setCurrentText] = useState(0);
@@ -39,11 +45,16 @@ const Header = () => {
         <div className="App">
             <Navbar />
             <div className="content">
-                <p className={`text ${isAnimating ? 'show' : 'hide'}`} ref={textRef}>
-                    {texts[currentText].split(' ').slice(0, 3).join(' ')}<br />
-                    {texts[currentText].split(' ').slice(3).join(' ')}
-                </p>
-                <img src={images[currentText]} alt="Lighting bulb" className="image" />
+                <div className="contentText">
+                    <p className={`text ${isAnimating ? 'show' : 'hide'}`} ref={textRef}>
+                        {texts[currentText].split(' ').slice(0, 3).join(' ')}<br />
+                        {texts[currentText].split(' ').slice(3).join(' ')}
+                    </p>
+                    <p className='textbottom'>
+                    {text2[currentText]}
+                    </p>
+                </div>
+                {images[currentText] && <img src={images[currentText]} alt="Lighting bulb" className="image" />}
             </div>
             <div className="textcontent">
                 <p className='textbottom'>
