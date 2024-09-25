@@ -32,8 +32,8 @@
 .offer-text {
   flex: 1;
   width: 50%;
-  background: linear-gradient(to right, #F7C8D7, #FFEDBC);
-  padding: 4vw;
+  background: linear-gradient(to right, #FFEDBC,#F7C8D7);
+  padding: 0 4vw 2vw;
 }
 
 .offer-text h3 {
@@ -53,10 +53,19 @@
   font-family: 'Bauhaus';
   color: #001d3d;
 }
-
-.offer-text p {
-  margin: 20px 0;
+.offer-text h5{
+  font-family: 'BauhausStd-Light';
+  font-size: 20px; 
+  font-weight: lighter;
+}
+.offer-text span{
+  font-size: 24px; 
+  font-family: 'Bauhaus';
   color: #001d3d;
+}
+.offer-text p {
+  color: #001d3d;
+  font-size: large;
 }
 
 .text {
@@ -113,8 +122,12 @@
 .view-services {
   color: #001d3d;
   font-family: 'Bauhaus';
+  
 }
-
+.view-services span{
+margin-left:8px ;
+color: #001d3d  !important;
+}
 .controls {
   position: absolute;
   top: 10px;

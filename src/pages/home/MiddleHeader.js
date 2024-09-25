@@ -94,13 +94,17 @@ const HeaderPage = () => {
                 ref={whatWeOfferRef}
             >
                 <div className="offer-text">
-                    <h3>Global Center of <span>INNOVATION</span></h3>
-                    <h5>— OUR SERVICES</h5>
-                    <h2>What We Offer</h2>
+                    <h5>Global Center of <span>INNOVATION</span></h5>
+                    <h5>— OUR SERVICES<h2>What We Offer</h2></h5>
                     <p>
-                        Our services prioritize strategy and transparency as fundamental elements. Our objective is to enable you to expand your business by eliminating technological obstacles and providing comprehensive support throughout the project's lifecycle.
+                        Our services prioritize strategy and<br/>
+                        transparency as fundamental elements. Our<br/>
+                        objective is to enable you to expand your<br/>
+                        business by eliminating technological<br/>
+                        obstacles and providing comprehensive<br/>
+                        support throughout the project's lifecycle.
                     </p>
-                    <a href="#" className="view-services">View All Services &gt;</a>
+                    <a href="#" className="view-services"><h5>View All<span>Services &gt;</span></h5></a>
                 </div>
                 <div className="slider-wrapper">
                     <div className='btnContainer'>

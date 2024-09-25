@@ -2,6 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import '../../styles/Footer.css';
  import images from '../../assets/images';
+ import innova8 from '../../assets/images/Innovat8.svg'
 
 const FooterSection = ({ children, delay }) => {
   const { ref, inView } = useInView({
@@ -26,7 +27,7 @@ const Footer = () => {
       <div className="footer-container">
         <FooterSection delay={0.1}>
           <div className="footer-logo">
-            <img src={images.innova8} alt="Innov8 Logo" />
+            <img src={innova8} alt="Innov8 Logo" />
           </div>
         </FooterSection>
 
