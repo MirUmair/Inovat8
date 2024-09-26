@@ -14,7 +14,6 @@
   padding-bottom: 10px;
 }
 
-
 .innovation-section {
   display: flex;
   flex-wrap: nowrap;
@@ -32,35 +31,30 @@
 .offer-text {
   flex: 1;
   width: 50%;
-  background: linear-gradient(to right, #FFEDBC,#F7C8D7);
+  background: linear-gradient(to right, #ffedbc, #f7c8d7);
   padding: 0 4vw 2vw;
 }
-
+.offer-text h2 {
+  font-family: "Bauhaus";
+  color: #001d3d;
+}
 .offer-text h3 {
   font-size: 2.5em;
-  font-family: 'Bauhaus';
+  font-family: "Bauhaus";
   color: #001d3d;
-
 }
-
-.offer-text h2 {
-  font-family: 'Bauhaus';
-  color: #001d3d;
-
-}
-
 .offer-text h4 {
-  font-family: 'Bauhaus';
+  font-family: "Bauhaus";
   color: #001d3d;
 }
-.offer-text h5{
-  font-family: 'BauhausStd-Light';
-  font-size: 20px; 
+.offer-text h5 {
+  font-family: "BauhausStd-Light";
+  font-size: 20px;
   font-weight: lighter;
 }
-.offer-text span{
-  font-size: 24px; 
-  font-family: 'Bauhaus';
+.offer-text span {
+  font-size: 24px;
+  font-family: "Bauhaus";
   color: #001d3d;
 }
 .offer-text p {
@@ -83,7 +77,6 @@
 .btnContainer {
   align-items: flex-end;
   margin-left: 30vw;
-
 }
 
 .slider {
@@ -109,24 +102,20 @@
 .slide h3 {
   color: #001d3d;
   font-weight: bold;
-  font-family: 'Bauhaus';
-
+  font-family: "Bauhaus";
 }
 
 .slide p {
-
   line-height: 1.6;
-
 }
 
 .view-services {
   color: #001d3d;
-  font-family: 'Bauhaus';
-  
+  font-family: "Bauhaus";
 }
-.view-services span{
-margin-left:8px ;
-color: #001d3d  !important;
+.view-services span {
+  margin-left: 8px;
+  color: #001d3d !important;
 }
 .controls {
   position: absolute;
@@ -136,6 +125,8 @@ color: #001d3d  !important;
   justify-content: space-between;
   padding: 0 20px;
   z-index: 10;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
 }
 
 button {
@@ -156,14 +147,8 @@ button:focus {
   outline: none;
 }
 
-.controls {
-  opacity: 0.8;
-  transition: opacity 0.3s ease-in-out;
-}
-
 /* General container for the slider and controls */
 .slider-wrapper {
-
   width: 50%;
 }
 
@@ -186,14 +171,12 @@ button:focus {
 
 .control.next {
   border-width: 1rem;
-  border-color: #1CB5E0;
+  border-color: #1cb5e0;
 }
 
 .control:hover {
   color: #104351;
 }
-
-
 
 .slider {
   display: flex;
@@ -213,7 +196,6 @@ button:focus {
 }
 
 .slide p {
-
   line-height: 1.6;
 }
 
@@ -221,7 +203,6 @@ button:focus {
 button:focus {
   outline: none;
 }
-
 
 .offer-text a {
   color: #001d3d;
@@ -245,12 +226,10 @@ button:focus {
 .service-card {
   background-color: #e6e6ff;
   border-radius: 5%;
-
 }
 
 .service {
   width: 15%;
-
 }
 
 .service-card h3 {
@@ -261,7 +240,10 @@ button:focus {
 
 /* Trusted By and What We Offer Sections */
 .trusted-by-section {
-  background-color: '#fff';
+  background-color: "#fff";
+  background-color: #fff;
+  padding-left: 2vw;
+  padding-top: 1vh;
 }
 
 .innovation-section {
@@ -280,9 +262,6 @@ button:focus {
   transform: translateX(-50px);
   /* Start hidden and slightly below */
 }
-
-
-
 
 .slider {
   display: flex;
@@ -294,21 +273,12 @@ button:focus {
   padding: 20px;
 }
 
-.control {
-  background-color: transparent;
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 10px;
-}
-
 .btnContainer {
   display: flex;
   width: 10vw;
 }
 
 /* Trusted By and What We Offer Sections */
-.trusted-by-section,
 .innovation-section {
   opacity: 0;
   transform: translateX(-50px);
@@ -325,8 +295,6 @@ button:focus {
   transform: translateX(-50px);
   /* Start hidden and slightly below */
 }
-
-
 
 /* Additional styling for Trusted By section */
 .trusted-logos img {
@@ -361,14 +329,6 @@ button:focus {
   padding: 20px;
 }
 
-.control {
-  background-color: transparent;
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 10px;
-}
-
 .btnContainer {
   display: flex;
   justify-content: space-between;
@@ -399,23 +359,11 @@ button:focus {
   }
 }
 
-/* Trusted By Section */
-.trusted-by-section {
-  background-color: #fff;
-   padding-left: 2vw;
-  padding-top: 1vh;
-}
-
- 
 .trusted-by-title h2 {
-  font-family: 'Bauhaus';
+  font-family: "Bauhaus";
   color: #203965;
   font-size: 2em;
 }
-
-
-
-
 
 .trusted-logos img:hover {
   transform: scale(1.1);

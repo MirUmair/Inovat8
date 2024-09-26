@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import '../../styles/HeaderPage.css'; // Import your CSS file
 
 import Navbar from '../../components/Navbar'; // Adjusted import path
@@ -17,8 +17,7 @@ const Header = () => {
         'Innovate with MENDIX: 10X faster enterprise solutions',
     ];
 
-    const images = [image.lightbulb1, '', image.lightbulb3, image.lightbulb4]; // Array of images corresponding to texts
-
+    const images = useMemo(() => [image.lightbulb1, '', image.lightbulb3, image.lightbulb4], [image]);
     // State to track current text index and animation state
     const [currentText, setCurrentText] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
