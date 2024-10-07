@@ -172,6 +172,20 @@
 .launch-content {
   margin: 5%;
 }
+
+/* Scoping Section */
+.scoping-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.scoping-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .page-header h1 {
