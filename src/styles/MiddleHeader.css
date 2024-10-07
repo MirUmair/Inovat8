@@ -197,6 +197,7 @@ button:focus {
 
 .slide p {
   line-height: 1.6;
+  font-size: large;
 }
 
 /* Styling for the hover state of the control buttons */
@@ -242,7 +243,7 @@ button:focus {
 .trusted-by-section {
   background-color: "#fff";
   background-color: #fff;
-  padding-left: 2vw;
+  padding-left: 0.5vw;
   padding-top: 1vh;
 }
 
@@ -296,6 +297,7 @@ button:focus {
   /* Start hidden and slightly below */
 }
 
+
 /* Additional styling for Trusted By section */
 .trusted-logos img {
   width: 100px;
@@ -342,7 +344,21 @@ button:focus {
 .slick-dots {
   bottom: -30px;
 }
+@media (max-width: 768px) {
+  .trusted-logos img {
+    width: 100px;  /* Reduce size for smaller screens */
+    margin: 5px;
+  }
+}
 
+@media (max-width: 480px) {
+  .trusted-logos img {
+    width: 100px;  /* Further reduce size for mobile devices */
+    margin: 3px;
+
+ 
+  }
+}
 /* Media Queries for responsiveness */
 @media (max-width: 1024px) {
   .offer-section {

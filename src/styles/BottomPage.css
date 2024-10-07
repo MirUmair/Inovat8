@@ -1,291 +1,305 @@
 .project-page-container {
-    padding: 20px;
-    font-family: "Arial", sans-serif;
-    color: #2a2a2a;
-    background-color: #fff;
-    padding-left: 3%;
-    padding-right: 3%;
-    box-shadow: 5px 5px 10px rgb(230, 240, 244) inset;
-  }
-  
-  .page-header {
-    text-align: left;
-  }
-  
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  color: #2a2a2a;
+  background-color: #fff;
+  padding-left: 3%;
+  padding-right: 3%;
+  box-shadow: 5px 5px 10px rgb(230, 240, 244) inset;
+}
+
+.page-header {
+  text-align: left;
+}
+
+.page-header h1 {
+  color: #022d62;
+  font-size: 2vw;
+  margin-bottom: 10px;
+}
+
+.page-header h2 {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 4%;
+  color: #022d62;
+  font-family: "BauhausStd-Light";
+}
+
+.page-header p {
+  font-size: 1.1vw;
+  margin-left: 4%;
+}
+
+.journey-section {
+  margin-top: 40px;
+  text-align: left;
+  color: #022d62;
+  margin-left: 4%;
+}
+
+.journey-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.journey-btn {
+  border-radius: 30px;
+  border: 2px solid #888;
+  background: transparent;
+  padding: 0.7vw 2.08vw;
+  font-size: 0.9vw;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: #022d62;
+}
+
+.journey-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.journey-btn.active {
+  border-color: #022d62;
+  color: #022d62;
+  font-size: small;
+  font-family: "Bauhaus";
+}
+
+.discovery-call {
+  margin-top: 40px;
+  text-align: left;
+  color: #022d62;
+  font-size: small;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.talk-button {
+  padding: 12px 20px;
+  background: #022d62;
+  font-family: "Bauhaus";
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin-top: 20px;
+}
+
+.call-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: 3.05vw;
+  height: 3.05vw;
+  margin-right: 0.7vw
+  ;
+}
+
+.detail-box {
+  flex: 1;
+  display: flex;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.detail-box1 {
+  flex: 1;
+  text-align: left;
+}
+
+.detail-box p {
+  display: flex;
+  font-weight: bold;
+  color: #022d62;
+}
+
+.detail-box1 p {
+  display: flex;
+  font-family: "Bauhaus";
+  font-size: large;
+}
+
+.detail-box div p {
+  margin: 0;
+  font-family: "Bauhaus";
+  font-size: large;
+}
+
+.detail-box div span {
+  margin-top: 0.6vw;
+}
+
+.detail-box div {
+  margin-top: 1.5vw;
+}
+
+.detail-box span {
+  display: block;
+  font-size: 0.97vw;
+  color: #022d62;
+}
+
+.detail-box .icon {
+  margin-right: 10px;
+  margin-top: 1.5vw;
+}
+
+.detail-box:first-child {
+  margin-left: 0;
+}
+
+.detail-box:last-child {
+  margin-right: 0;
+}
+
+.scoping-content {
+  margin: 5%;
+}
+.poc-design-content {
+  margin: 5%;
+}
+.poc-launch-content {
+  margin: 5%;
+}
+.full-development-content {
+  margin: 5%;
+}
+.launch-content {
+  margin: 5%;
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
   .page-header h1 {
-    color: #022d62;
-    font-size: 32px;
+    font-size: 28px;
+  }
+
+  .page-header h2 {
+    font-size: 26px;
+    margin-left: 2%;
+  }
+
+  .page-header p {
+    font-size: 14px;
+    margin-left: 2%;
+  }
+
+  .journey-section {
+    margin-left: 2%;
+  }
+
+  .journey-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .journey-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .discovery-call {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .call-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .icon {
     margin-bottom: 10px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 24px;
+  }
+
   .page-header h2 {
-    font-size: 30px;
-    margin-top: 10px;
-    margin-left: 4%;
-    color: #022d62;
-    font-family: "BauhausStd-Light";
+    font-size: 22px;
   }
-  
-  .page-header p {
-    font-size: 16px;
-    margin-left: 4%;
-  }
-  
-  .journey-section {
-    margin-top: 40px;
-    text-align: left;
-    color: #022d62;
-    margin-left: 4%;
-  }
-  
+
   .journey-buttons {
-    display: flex;
-    justify-content: flex-start;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 10px;
   }
-  
+
   .journey-btn {
-    padding: 10px 30px;
-    border-radius: 30px;
-    border: 2px solid #888;
-    background: transparent;
-    font-size: small;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    color: #022d62;
+    padding: 6px 15px;
+    font-size: 12px;
   }
-  
-  .journey-btn:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .journey-btn.active {
-    border-color: #022d62;
-    color: #022d62;
-    font-size: small;
-    font-family: "Bauhaus";
-  }
-  
-  .discovery-call {
-    margin-top: 40px;
-    text-align: left;
-    color: #022d62;
-    font-size: small;
-    margin-left: 4%;
-    margin-right: 4%;
-  }
-  
+
   .talk-button {
-    padding: 12px 20px;
-    background: #022d62;
-    font-family: "Bauhaus";
-    color: white;
-    font-size: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin-top: 25px;
-  }
-  
-  .call-details {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .icon {
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
-  }
-  
-  .detail-box {
-    flex: 1;
-    display: flex;
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
-  .detail-box1 {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .detail-box p {
-    display: flex;
-    font-weight: bold;
-    color: #022d62;
-  }
-  
-  .detail-box1 p {
-    display: flex;
-    font-family: "Bauhaus";
-    font-size: large;
-  }
-  
-  .detail-box div p {
-    margin: 0;
-    font-family: "Bauhaus";
-    font-size: large;
-  }
-  
-  .detail-box div span {
-    margin-top: 0.6vw;
-  }
-  
-  .detail-box div {
-    margin-top: 1.5vw;
-  }
-  
-  .detail-box span {
-    display: block;
+    padding: 10px 15px;
     font-size: 14px;
-    color: #022d62;
   }
-  
-  .detail-box .icon {
-    margin-right: 10px;
-    margin-top: 1.5vw;
+
+  .detail-box span {
+    font-size: 12px;
   }
-  
-  .detail-box:first-child {
+}
+
+@media (max-width: 480px) {
+  .project-page-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .page-header h1 {
+    font-size: 20px;
+  }
+
+  .page-header h2 {
+    font-size: 18px;
+  }
+
+  .page-header p,
+  .journey-section {
     margin-left: 0;
   }
-  
-  .detail-box:last-child {
+
+  .journey-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .discovery-call {
+    font-size: 12px;
+    margin-left: 0;
     margin-right: 0;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 1024px) {
-    .page-header h1 {
-      font-size: 28px;
-    }
-  
-    .page-header h2 {
-      font-size: 26px;
-      margin-left: 2%;
-    }
-  
-    .page-header p {
-      font-size: 14px;
-      margin-left: 2%;
-    }
-  
-    .journey-section {
-      margin-left: 2%;
-    }
-  
-    .journey-buttons {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .journey-btn {
-      padding: 8px 20px;
-      font-size: 14px;
-    }
-  
-    .discovery-call {
-      margin-left: 2%;
-      margin-right: 2%;
-    }
-  
-    .call-details {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .detail-box {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .icon {
-      margin-bottom: 10px;
-    }
+
+  .talk-button {
+    padding: 8px 12px;
+    font-size: 12px;
   }
-  
-  @media (max-width: 768px) {
-    .page-header h1 {
-      font-size: 24px;
-    }
-  
-    .page-header h2 {
-      font-size: 22px;
-    }
-  
-    .journey-buttons {
-      gap: 10px;
-    }
-  
-    .journey-btn {
-      padding: 6px 15px;
-      font-size: 12px;
-    }
-  
-    .talk-button {
-      padding: 10px 15px;
-      font-size: 14px;
-    }
-  
-    .detail-box span {
-      font-size: 12px;
-    }
+
+  .detail-box p {
+    font-size: 12px;
   }
-  
-  @media (max-width: 480px) {
-    .project-page-container {
-      padding-left: 5%;
-      padding-right: 5%;
-    }
-  
-    .page-header h1 {
-      font-size: 20px;
-    }
-  
-    .page-header h2 {
-      font-size: 18px;
-    }
-  
-    .page-header p,
-    .journey-section {
-      margin-left: 0;
-    }
-  
-    .journey-btn {
-      padding: 5px 10px;
-      font-size: 12px;
-    }
-  
-    .discovery-call {
-      font-size: 12px;
-      margin-left: 0;
-      margin-right: 0;
-    }
-  
-    .talk-button {
-      padding: 8px 12px;
-      font-size: 12px;
-    }
-  
-    .detail-box p {
-      font-size: 12px;
-    }
-  
-    .detail-box1 p {
-      font-size: 14px;
-    }
-  
-    .detail-box span {
-      font-size: 10px;
-    }
-  
-    .icon {
-      width: 36px;
-      height: 36px;
-      
-    }
+
+  .detail-box1 p {
+    font-size: 14px;
   }
-  
+
+  .detail-box span {
+    font-size: 10px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+}

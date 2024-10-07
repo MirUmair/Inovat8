@@ -154,7 +154,10 @@
 .footer-bottom p {
   margin-left: 3%;
 }
-
+.footer-reserved{
+  color: #fff;
+  font-size: 14px;
+}
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .footer-logo img {

@@ -126,6 +126,192 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Navbar.css */
+.industries-dropdown {
+    position: absolute;
+    top: 70px; /* Adjust for the height of the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  .industries-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  
+  .industries-column {
+    flex: 1;
+    padding: 0 20px;
+  }
+  
+  .industries-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .industries-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .industries-column ul li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+  }
+  
+  .industries-column p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  
+  .industries-all {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .industries-button {
+    background-color: #001f7f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  .industries-button:hover {
+    background-color: #0053ba;
+  }
+  .popup-overlay {
+    position: absolute;
+    top: 60px;
+    right: 15vw;
+    width: 514px; /* Set width for larger screens */
+    height: 256px;
+    transform: scale(1.3786, 1.3786);
+    transform-origin: 0px 0px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+
+.popup-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Bauhaus';
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3vw;
+}
+
+.partner-logos img {
+    max-width: 200px; /* Adjust the size of the logos */
+    height: auto;
+}
+
+
+/* Responsive adjustments for tablets */
+@media (max-width: 1024px) {
+    .popup-overlay {
+        right: 10vw; /* Adjust position for smaller screens */
+        width: 80%; /* Make the popup take 80% of the width */
+        height: auto; /* Make height dynamic based on content */
+        transform: scale(1); /* Reset scale */
+    }
+
+    .popup-heading {
+        font-size: 20px; /* Reduce heading size */
+    }
+
+    .partner-logos {
+        margin-top: 2vw; /* Adjust margin for smaller screens */
+    }
+
+    .partner-logos img {
+        max-width: 150px; /* Resize logos */
+    }
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 768px) {
+    .popup-overlay {
+        top: 50px; /* Adjust top position */
+        right: 5vw; /* Adjust right position */
+        width: 90%; /* Make popup take 90% of the width */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .popup-heading {
+        font-size: 18px; /* Reduce font size further */
+    }
+
+    .partner-logos {
+        flex-direction: column; /* Stack logos vertically on small screens */
+    }
+
+    .partner-logos img {
+        max-width: 120px; /* Further reduce the logo size */
+        margin-bottom: 10px; /* Add spacing between stacked logos */
+    }
+}
+
+/* Responsive adjustments for very small devices (phones) */
+@media (max-width: 480px) {
+    .popup-overlay {
+        top: 40px; /* Adjust for even smaller screens */
+        width: 95%; /* Make popup nearly full width */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .popup-heading {
+        font-size: 16px; /* Reduce heading size further */
+    }
+
+    .partner-logos img {
+        max-width: 100px; /* Adjust logo size for very small screens */
+    }
+}
+
+
+  
+  @media (max-width: 768px) {
+    .industries-content {
+      flex-direction: column;
+      text-align: left;
+    }
+  
+    .industries-column {
+      margin-bottom: 20px;
+    }
+  
+    .industries-all {
+      text-align: center;
+    }
+  }
+
 /* Mobile responsiveness */
 @media (max-width: 1024px) {
     .nav-list {

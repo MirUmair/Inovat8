@@ -11,21 +11,22 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /* background: linear-gradient(to bottom right, #000000, #3533CD); */
   font-family: 'BauhausStd-Light';
-  /* Add fallback fonts */
 }
 
 .App {
   height: 100%;
   background: linear-gradient(to bottom right, #000000, #3533CD);
-  /* Navbar at the top, content below */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .scrollable-content {
   height: 100%;
-  overflow-y: scroll;
-  /* Enable scrolling but hide scrollbar */
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /* Hide scrollbars */
@@ -33,28 +34,26 @@ body {
   display: none;
 }
 
-.scrollable-content {
-  scrollbar-width: none;
-  /* For Firefox */
-  -ms-overflow-style: none;
-  /* For IE and Edge */
-}
-
 /* Content styling */
 .content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
   height: 70vh;
   width: 95vw;
-  }
+  margin: auto;
+}
 
-/* Content styling */
 .textcontent {
   display: flex;
-  margin-left: 6%;
+  flex-direction: row;
+  margin-left: 6vw;
   margin-bottom: 3vw;
 }
 
+/* Text content styling */
 .textbottom {
   font-size: 2vw;
   margin-left: 1vw;
@@ -66,7 +65,7 @@ body {
   font-size: 2vw;
   color: white;
   font-family: 'Bauhaus';
-  margin-left: 1rem
+  margin-left: 1rem;
 }
 
 /* Keyframes for text animations */
@@ -75,7 +74,6 @@ body {
     opacity: 0;
     transform: translateX(-100px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0px);
@@ -86,7 +84,6 @@ body {
 .animateIn {
   text-align: left;
   font-size: 2rem;
-  /* Use rem units for better scaling */
   color: white;
   font-family: 'Bauhaus', sans-serif;
   font-weight: bold;
@@ -102,22 +99,27 @@ body {
 /* Lightbulb image styling */
 .image {
   max-width: 35vw;
-  height: 35vw;
- }
+  height: auto;
+  margin: auto;
+}
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: auto;
   }
 
   .animateIn {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    padding: 2vw;
   }
 
   .image {
-    max-width: 30vw;
+    max-width: 50vw;
+    height: auto;
   }
 }
 
@@ -136,33 +138,57 @@ body {
 .contentText {
   margin-left: 5vw;
   padding-top: 10vh;
-  height: 50vh;
- }
+  height: auto;
+}
 
 .text.show {
   opacity: 1;
-  transform: translateX(10);
-  /* Move to normal position */
+  transform: translateX(0);
 }
 
 .text.hide {
   opacity: 0;
   transform: translateX(-30px);
-  /* Move text up to hide */
 }
 
 /* Media query for extra small screens */
 @media (max-width: 480px) {
   .animateIn {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   .image {
-    max-width: 40vw;
+    max-width: 60vw;
+    height: auto;
   }
 }
 
 /* Paragraph font settings */
 p {
   font-family: 'Bauhaus2', sans-serif;
+  font-size: 4vw;
+}
+
+/* Adjust text for very small screens */
+@media (max-width: 360px) {
+  .textbottom,
+  .textbottom1 {
+    font-size: 3.5vw;
+  }
+
+  .text {
+    font-size: 6vw;
+  }
+
+  .animateIn {
+    font-size: 3.5rem;
+  }
+
+  .image {
+    max-width: 90vw;
+  }
+
+  p {
+    font-size: 5vw;
+  }
 }
