@@ -105,8 +105,22 @@ function Navbar() {
                 <li>Energy</li>
                 <li>Chemicals</li>
                 <li>CPG & Retail</li>
+                <li>Logistics & Transportation</li>
+                <li>Public Sector</li>
               </ul>
             </div>
+            <div className="industries-column">
+              <h3>Professional Services Firms</h3>
+              <ul>
+                <li>Consultancy & Advisory Firms</li>
+                <li>Legal Firms</li>
+                <li>Real Estate Firms</li>
+                <li>Education & EdTech Firms</li>
+              </ul>
+            </div>
+          </div>
+          <div className="industries-all">
+            <button className="industries-button">All Industries →</button>
           </div>
         </div>
       )}

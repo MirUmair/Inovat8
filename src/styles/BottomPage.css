@@ -96,8 +96,14 @@
 .icon {
   width: 3.05vw;
   height: 3.05vw;
-  margin-right: 0.7vw
-  ;
+  margin-right: 0.7vw;
+  
+}
+@media only screen and (max-width: 1024px) {
+  .icon {
+    width: 8.05vw;
+    height: 8.05vw;
+  }
 }
 
 .detail-box {
@@ -115,6 +121,7 @@
 .detail-box p {
   display: flex;
   font-weight: bold;
+  font-size: 0.8em;
   color: #022d62;
 }
 
@@ -143,11 +150,74 @@
   font-size: 0.97vw;
   color: #022d62;
 }
-
 .detail-box .icon {
   margin-right: 10px;
-  margin-top: 1.5vw;
+  margin-top: 0.9vw;
 }
+/* Media queries for responsiveness */
+@media only screen and (max-width: 1200px) {
+  .detail-box1 p, 
+  .detail-box div p {
+    font-size: 1.5rem; /* Adjust font size for medium screens */
+  }
+  .detail-box div {
+    margin-top: 2vw; /* Increase spacing for medium screens */
+  }
+  .detail-box span {
+    font-size: 1.2rem; /* Adjust font size for medium screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .detail-box1 p, 
+  .detail-box div p {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+  .detail-box div {
+    margin-top: 2.5vw; /* Increase spacing for smaller screens */
+  }
+  .detail-box span {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .detail-box1 p, 
+  .detail-box div p {
+    font-size: 1rem; /* Adjust font size for mobile devices */
+    flex-direction: column; /* Stack elements vertically for small screens */
+  }
+  .detail-box div {
+    margin-top: 3vw; /* Increase spacing for mobile devices */
+  }
+  .detail-box span {
+    margin-top: 1vw;
+    font-size: 0.9rem; /* Adjust font size for mobile devices */
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .detail-box .icon {
+    margin-right: 10px; /* Adjust margin for medium screens */
+  
+    margin-bottom: 0.2vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .detail-box .icon {
+    margin-right: 6px; /* Adjust margin for smaller screens */
+    margin-top: 2.5vw; /* Adjust top margin for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .detail-box .icon {
+    margin-right: 4px; /* Adjust margin for mobile devices */
+    margin-top: 3vw;   /* Adjust top margin for mobile devices */
+  }
+}
+
+
 
 .detail-box:first-child {
   margin-left: 0;
@@ -189,7 +259,7 @@
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .page-header h1 {
-    font-size: 28px;
+    font-size: 1.2em;
   }
 
   .page-header h2 {
@@ -215,15 +285,20 @@
     padding: 8px 20px;
     font-size: 14px;
   }
-
+.discovery-content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
   .discovery-call {
     margin-left: 2%;
     margin-right: 2%;
   }
 
   .call-details {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    /* align-items: center; */
+    flex-wrap: wrap;
   }
 
   .detail-box {

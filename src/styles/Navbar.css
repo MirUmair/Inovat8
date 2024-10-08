@@ -12,21 +12,6 @@
 .logo {
   max-width: 13vw;
 }
-
-.bg {
-  max-width: 13vw;
-  opacity: 0.2;
-}
-
-.background {
-  background-image: url("/src/assets/images/TopBackground.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  width: 10vh;
-}
-
 /* Hamburger menu for mobile */
 .hamburger {
   display: none;
@@ -41,6 +26,21 @@
   margin: 4px 0;
   transition: 0.4s;
 }
+.bg {
+  max-width: 13vw;
+  opacity: 0.2;
+}
+
+.background {
+  background-image: url("/src/assets/images/TopBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 10vh;
+}
+
+
 
 /* Navigation list */
 .nav-list {
@@ -72,14 +72,14 @@
 }
 
 .nav-item1 {
+  align-items: right;
   color: white;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   font-family: "Bauhaus";
   white-space: nowrap;
   font-weight: lighter;
-  right: 5%;
-  font-size: 1.2vw;
+  
 }
 
 .nav-item:hover {
@@ -126,7 +126,7 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Navbar.css */
+/* Industries Section*/
 .industries-dropdown {
   position: absolute;
   top: 70px; /* Adjust for the height of the navbar */
@@ -158,16 +158,19 @@
   font-size: 1.2em;
   margin-bottom: 10px;
   font-weight: 600;
+  font-family: "Bauhaus";
 }
 
 .industries-column ul {
   list-style: none;
   padding: 0;
+  
 }
 
 .industries-column ul li {
   margin-bottom: 8px;
   font-size: 0.9em;
+  font-family: "BauhausStd-Light";
 }
 
 .industries-column p {
@@ -194,6 +197,31 @@
 .industries-button:hover {
   background-color: #0053ba;
 }
+/*Industries Section Adjust for mobile phones */
+@media (max-width: 768px) {
+  .industries-dropdown {
+    position: absolute;
+    width: 80%;
+  }
+  .industries-content {
+    flex-direction: column;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+  }
+
+  .industries-column {
+    margin-bottom: 20px;
+  }
+
+  .industries-all {
+    text-align: center;
+  }
+}
+
+/*Partner Section css*/
 .popup-overlay {
   position: absolute;
   top: 60px;
@@ -228,112 +256,6 @@
   max-width: 200px; /* Adjust the size of the logos */
   height: auto;
 }
-.resources-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-
-.resources-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 30%;
-  max-width: 800px;
-  display: flex;
-  margin-bottom: 25%;
-  margin-right: 5%;
-}
-
-.resources-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.resources-left {
-  width: 33%;
-}
-
-.resources-left h3 {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #333;
-}
-
-.resources-left p {
-  font-size: 1em;
-  color: #555;
-  font-family: "BauhausStd-Light";
-}
-
-.resources-right {
-  width: 50%;
-}
-
-.resources-right h3 {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.resources-right ul {
-  list-style: none;
-  padding: 0;
-}
-
-.resources-right ul li {
-  margin-bottom: 8px;
-  font-family: "BauhausStd-Light";
-}
-
-@media (max-width: 1024px) {
-  .resources-content {
-    width: 40%;
-    margin-bottom: 20%;
-  }
-}
-
-/* Adjust for mobile phones */
-@media (max-width: 768px) {
-  .resources-content {
-    width: 80%;
-    margin-right: 10%;
-    margin-bottom: 15%;
-    flex-direction: column; /* Stack the content vertically */
-  }
-  .resources-left h3 {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #333;
-  }
-  .resources-left p {
-    font-size: 0.9em;
-    color: #555;
-  }
-  .resources-right {
-    width: 50%;
-  }
-  .resources-right h3 {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  .resources-right ul {
-    font-size: 0.9em;
-  }
-  .resources-right ul li {
-    margin-bottom: 5px;
-  }
-}
 
 /* Responsive adjustments for tablets */
 @media (max-width: 1024px) {
@@ -343,7 +265,7 @@
     height: auto; /* Make height dynamic based on content */
     transform: scale(1); /* Reset scale */
   }
-
+ 
   .popup-heading {
     font-size: 20px; /* Reduce heading size */
   }
@@ -357,7 +279,7 @@
   }
 }
 
-/* Responsive adjustments for mobile phones */
+/* Patner Section Responsive adjustments for mobile phones */
 @media (max-width: 768px) {
   .popup-overlay {
     top: 50px; /* Adjust top position */
@@ -397,20 +319,118 @@
   }
 }
 
-@media (max-width: 768px) {
-  .industries-content {
-    flex-direction: column;
-    text-align: left;
-  }
 
-  .industries-column {
-    margin-bottom: 20px;
-  }
+.resources-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
 
-  .industries-all {
-    text-align: center;
+.resources-content {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  position:absolute;
+  top: 8%;
+ right: 15%;
+  background: rgb(238, 238, 238);
+  width: 514.277px;
+  height: 256px;
+  transform: scale(1.3786, 1.3786);
+  transform-origin: 0px 0px;
+}
+
+.resources-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.resources-left {
+  width: 33%;
+}
+
+.resources-left h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.resources-left p {
+  font-size: 0.8em;
+  color: #555;
+  font-family: "BauhausStd-Light";
+}
+
+.resources-right {
+  width: 50%;
+}
+
+.resources-right h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.resources-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resources-right ul li {
+  margin-bottom: 8px;
+  font-size: 0.8em;
+  font-family: "BauhausStd-Light";
+}
+
+@media (max-width: 1024px) {
+  .resources-content {
+    width: 40%;
+    margin-bottom: 20%;
   }
 }
+
+/* Adjust for mobile phones */
+@media (max-width: 768px) {
+  .resources-content {
+    width: 50%;
+    height: 30%;
+    right: 25%;
+    flex-direction: column; /* Stack the content vertically */
+  }
+  .resources-left h3 {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+  }
+  .resources-left p {
+    font-size: 0.7em;
+    color: #555;
+  }
+  .resources-right {
+    width: 50%;
+  }
+  .resources-right h3 {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .resources-right ul {
+    font-size: 0.7em;
+  }
+  .resources-right ul li {
+    margin-bottom: 5px;
+  }
+}
+
 
 /* Mobile responsiveness */
 @media (max-width: 1024px) {
