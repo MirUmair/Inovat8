@@ -16,19 +16,19 @@ const HeaderPage = () => {
         "Enhance the capabilities of AI/ML with ease through Inov8, your indispensable partner in accelerating the development and deployment of cutting-edge AI/ML solutions. Inov8 empowers businesses to spearhead technological progress by enabling quick adaptations and innovations to navigate the ever-evolving AI/ML domain proficiently.",
     },
     {
-      title: "Development",
+      title: "Enterprise App Development",
       description:
         "Our expertise lies in developing enterprise-level applications utilizing low code approaches. Our team helps streamline development with transparency, agility, and a commitment to your goals.",
     },
     {
-      title: "AI/Enhance",
+      title: "Strategic Advisory",
       description:
-        "Enhance the capabilities of AI/ML with ease through Inov8, your indispensable partner in accelerating the development and deployment of cutting-edge AI/ML solutions. Inov8 empowers businesses to spearhead technological progress by enabling quick adaptations and innovations to navigate the ever-evolving AI/ML domain proficiently.",
+        "Inovat8 offers specialized advisory services for companies looking to implement or enhance low-code/no-code platforms. We ensure a tailored strategy that aligns with your business objectives. For more complex needs, our AI-driven full-stack development team integrates advanced solutions, utilizing AI to optimize functionality, scalability, automation, and big data management. Additionally, we provide expertise in analytics, enabling businesses to harness the power of data for smarter decision-making. Our intelligent and adaptive services are designed to grow and evolve with your business.",
     },
     {
-      title: "Development Enhance",
+      title: "Growth and Scale",
       description:
-        "Our expertise lies in developing enterprise-level applications utilizing low code approaches. Our team helps streamline development with transparency, agility, and a commitment to your goals.",
+        "Our Growth and Scale offerings empower businesses at every stage, from initial adoption of low-code/no-code platforms to advanced AI-driven full-stack application development. We provide the necessary support and expertise to facilitate seamless transitions and optimize performance, ensuring your organization can effectively harness the potential of modern technology for sustained growth.",
     },
   ];
   const updateSliderPosition = () => {

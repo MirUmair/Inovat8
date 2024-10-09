@@ -1,11 +1,11 @@
 /* Reasons Section */
 .reasons-section {
-  background-color: #fff;
+  background: linear-gradient(to bottom right, #000000, #3533CD);
   padding: 40px;
 }
 .reasons-section h3 {
   font-family: 'Bauhaus';
-  color: #203965;
+  color: #f3f4f7;
   font-size: 2em;
 }
 .reason {
@@ -15,12 +15,14 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .reason h4 {
-  color: #001d3d;
+  color: #f3f4f7;
   font-family: 'Bauhaus';
+  font-size: 1.3em;
 }
 .reason p {
   margin-top: 10px;
-  font-size: 0.9em;
+  font-size: 1em;
+  color: #f3f4f7;
 }
 .reasons-grid {
   display: grid;

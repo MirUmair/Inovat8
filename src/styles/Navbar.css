@@ -40,8 +40,6 @@
   width: 10vh;
 }
 
-
-
 /* Navigation list */
 .nav-list {
   list-style: none;
@@ -73,17 +71,21 @@
 
 .nav-item1 {
   align-items: right;
+  margin-top: 2px;
+  margin-left: 40px;
+  font-size: 1.2vw;
   color: white;
   cursor: pointer;
   position: relative;
   font-family: "Bauhaus";
   white-space: nowrap;
   font-weight: lighter;
-  
 }
-
-.nav-item:hover {
-  text-decoration: underline;
+.nav-list :hover {
+  padding: 5px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  color: black;
 }
 
 /* Dropdown arrow */
@@ -164,7 +166,6 @@
 .industries-column ul {
   list-style: none;
   padding: 0;
-  
 }
 
 .industries-column ul li {
@@ -265,7 +266,7 @@
     height: auto; /* Make height dynamic based on content */
     transform: scale(1); /* Reset scale */
   }
- 
+
   .popup-heading {
     font-size: 20px; /* Reduce heading size */
   }
@@ -319,7 +320,6 @@
   }
 }
 
-
 .resources-overlay {
   position: fixed;
   top: 0;
@@ -336,9 +336,9 @@
   padding: 20px;
   border-radius: 10px;
   display: flex;
-  position:absolute;
+  position: absolute;
   top: 8%;
- right: 15%;
+  right: 15%;
   background: rgb(238, 238, 238);
   width: 514.277px;
   height: 256px;
@@ -431,7 +431,6 @@
   }
 }
 
-
 /* Mobile responsiveness */
 @media (max-width: 1024px) {
   .nav-list {
@@ -482,5 +481,121 @@
 
   .cta {
     padding: 8px 16px;
+  }
+}
+.Services-dropdown {
+  position: absolute;
+  top: 70px; /* Adjust for the height of the navbar */
+  left: 30%;
+  width: 17%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+.Services-dropdown p {
+  font-size: 1.2em;
+}
+
+
+.Product-dropdown {
+  position: absolute;
+  top: 70px; /* Adjust for the height of the navbar */
+  left: 37%;
+  width: 17%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+.Product-dropdown p {
+  font-size: 1.2em;
+}
+.Product-dropdown {
+  position: absolute;
+  top: 70px; /* Adjust for the height of the navbar */
+  left: 50%;
+  width: 90%; /* Full width for small screens */
+  max-width: 300px; /* Set a maximum width for larger screens */
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+  .Product-dropdown {
+    width: 50%; /* Adjust width for medium-sized screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .Product-dropdown {
+    width: 17%; /* Adjust width for larger screens */
+    left: 37%; /* Adjust the position for larger screens */
+  }
+}
+
+.Product-dropdown p {
+  font-size: 1.2em;
+}
+
+/* Adjust text size for small screens */
+@media (max-width: 767px) {
+  .Product-dropdown p {
+    font-size: 1em;
+  }
+}
+.Product-dropdown {
+  position: absolute;
+  top: 70px; /* Adjust for the height of the navbar */
+  left: 50%;
+  width: 90%; /* Full width for small screens */
+  max-width: 300px; /* Set a maximum width for larger screens */
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+  .Product-dropdown {
+    width: 50%; /* Adjust width for medium-sized screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .Product-dropdown {
+    width: 17%; /* Adjust width for larger screens */
+    left: 37%; /* Adjust the position for larger screens */
+  }
+}
+
+.Product-dropdown p {
+  font-size: 1.2em;
+}
+
+/* Adjust text size for small screens */
+@media (max-width: 767px) {
+  .Product-dropdown p {
+    font-size: 1em;
   }
 }

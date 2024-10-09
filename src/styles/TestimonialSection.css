@@ -1,0 +1,122 @@
+/* Container for the whole testimonial section */
+.testimonial-container {
+    padding: 100px;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+  }
+  
+  .testimonial-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #002f6c;
+    margin-bottom: 10px;
+    left: 0;
+  }
+  
+  .testimonial-subtitle {
+    font-size: 36px;
+    color: #374872;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-content {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Quote Box Section */
+  .testimonial-quote-box {
+    position: relative;
+    background-color: transparent;
+    max-width: 600px;
+    padding: 20px;
+    font-size: 18px;
+    color: #374872;
+    text-align: left;
+    margin-right: 20px;
+  }
+  
+  .quote-icon {
+    font-size: 60px;
+    color: #002f6c;
+  }
+  
+  .quote-left {
+    position: absolute;
+    top: -30px;
+    left: -50px;
+  }
+  
+  .quote-right {
+    position: absolute;
+    bottom: -30px;
+    right: -50px;
+  }
+  
+  .testimonial-text {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .quote-author {
+    margin-top: 20px;
+  }
+  
+  .author-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #002f6c;
+  }
+  
+  .author-title {
+    font-size: 14px;
+    color: #7a849e;
+  }
+  
+  /* Image Circle */
+  .testimonial-image {
+    position: relative;
+  }
+  
+  .image-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #f2f4fc, #f79794);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .testimonial-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Arrow Buttons */
+  .testimonial-arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 36px;
+    color: #002f6c;
+    cursor: pointer;
+  }
+  
+  .left-arrow {
+    position: absolute;
+    left: -50px;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    right: -50px;
+  }
+  
+  .testimonial-arrow:hover {
+    color: #1f4f8b;
+  }
+  

@@ -1,16 +1,16 @@
-import React from 'react';
-import { useInView } from 'react-intersection-observer';
-import '../../styles/ReasonsSection.css'; // Import your CSS file
+import React from "react";
+import { useInView } from "react-intersection-observer";
+import "../../styles/ReasonsSection.css"; // Import your CSS file
 
 const Reason = ({ title, description, delay }) => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger animation only once
-    threshold: 0.1,    // Trigger when 10% of the component is visible
+    threshold: 0.1, // Trigger when 10% of the component is visible
   });
 
   return (
     <div
-      className={`reason ${inView ? 'slide-in' : 'hidden'}`}
+      className={`reason ${inView ? "slide-in" : "hidden"}`}
       ref={ref}
       style={{ animationDelay: `${delay}s` }}
     >
@@ -27,22 +27,66 @@ const ReasonsSection = () => {
       <div className="reasons-grid">
         <Reason
           title="Cross Platform"
-          description="At Inov8, we embrace a versatile approach to software platforms. Whether it involves no-code/low-code solutions or full-stack development, we thoroughly evaluate each facet of your project to identify the most suitable solution."
+          description={
+            <>
+              At Inov8, we embrace a versatile
+              <br /> approach to software platforms.
+              <br />
+              Whether it involves no-code/low-code
+              <br /> solutions or full-stack development,
+              <br />
+              we thoroughly evaluate each
+              <br /> facet of your project to identify
+              <br /> the most suitable solution.
+            </>
+          }
           delay={0.1}
         />
         <Reason
           title="Strategic Approach"
-          description="We start by thinking about the end goal. Our expertise in strategic alignment helps create a plan to bring your ideas to life."
+          description={
+            <>
+              We start by thinking about the end
+              <br /> goal. Our expertise in strategic
+              <br /> alignment and architecture helps
+              <br /> create a plan to bring your ideas to
+              <br />
+              life.
+            </>
+          }
           delay={0.3}
         />
         <Reason
           title="Scalability"
-          description="Our platform-agnostic approach enables us to scale with you. Whether it's quickly creating an MVP with no code, building large business-critical systems with low code, or expanding your digital products with full-stack development, we're here to deliver and support your business growth."
+          description={
+            <>
+              Our platform-agnostic approach <br />
+              enables us to scale with you. <br />
+              Whether it's quickly creating an <br /> MVP with no code, building
+              large <br />
+              business-critical systems with low <br />
+              code, or expanding your digital <br />
+              products with full-stack
+              <br /> development, we're here to <br /> deliver and support your{" "}
+              <br />
+              business growth.
+            </>
+          }
           delay={0.5}
         />
         <Reason
           title="Continued Project Support"
-          description="We’re here to deliver and support your business growth."
+          description={
+            <>
+              We're not the disappearing
+              <br /> type. Once the first version
+              <br /> of your project is ready,
+              <br /> we're still in the game. We'll
+              <br /> help you understand the
+              <br /> app and lend a hand when
+              <br /> it's time to take things up a<br /> notch.
+            </>
+          }
           delay={0.7}
         />
       </div>

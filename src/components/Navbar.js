@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
-import '../styles/Navbar.css';
-import logo from '../assets/images/Innovat8.svg';
-import mendix from '../assets/images/mendix-logo.png';
-import aws from '../assets/images/aws-logo.png';
+import React, { useState } from "react";
+import "../styles/Navbar.css";
+import logo from "../assets/images/Innovat8.svg";
+import mendix from "../assets/images/mendix-logo.png";
+import aws from "../assets/images/aws-logo.png";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
   const [partnersOpen, setPartnersOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false); // State for Resources popup
@@ -13,7 +15,12 @@ function Navbar() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen);
+  };
+  const toggleProducts = () => {
+    setProductsOpen(!productsOpen);
+  };
   const toggleIndustries = () => {
     setIndustriesOpen(!industriesOpen);
   };
@@ -29,21 +36,23 @@ function Navbar() {
   return (
     <nav className="navbar">
       <img src={logo} alt="Innovat8 Logo" className="logo" />
-      <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+      <div
+        className={`hamburger ${menuOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
 
-      <ul className={`nav-list ${menuOpen ? 'active' : ''}`}>
+      <ul className={`nav-list ${menuOpen ? "active" : ""}`}>
         <li className="nav-item">About Us</li>
-        <li className="nav-item dropdown-container">
+        <li className="nav-item dropdown-container" onClick={toggleServices}>
           Services <span className="arrow">▼</span>
         </li>
-        <li className="nav-item dropdown-container">
+        <li className="nav-item dropdown-container" onClick={toggleProducts}>
           Products <span className="arrow">▼</span>
         </li>
-
         <li className="nav-item" onClick={toggleIndustries}>
           Industries <span className="arrow">▼</span>
         </li>
@@ -54,7 +63,6 @@ function Navbar() {
             <li className="dropdown-item">Team B</li>
           </ul>
         </li>
-
         <li className="nav-item dropdown-container">
           Projects <span className="arrow">▼</span>
           <ul className="dropdown">
@@ -62,8 +70,13 @@ function Navbar() {
             <li className="dropdown-item">Project B</li>
           </ul>
         </li>
-        <li className="nav-item" onClick={togglePartners}>Partners</li>
-        <li className="nav-item" onClick={toggleResources}>Resources</li> {/* Open resources popup */}
+        <li className="nav-item" onClick={togglePartners}>
+          Partners
+        </li>
+        <li className="nav-item" onClick={toggleResources}>
+          Resources
+        </li>{" "}
+        {/* Open resources popup */}
         <li className="nav-item1">Let's Innovate</li>
       </ul>
 
@@ -79,13 +92,42 @@ function Navbar() {
           </div>
         </div>
       )}
-
+      {servicesOpen && (
+        <div className="Services-dropdown">
+          <p>
+            Enterprise Mobile App Development
+            <br /> Enterprise Web App Development
+            <br />
+            Data Analytics
+            <br /> Insights & Intelligence
+            <br /> AI/ML Solutions
+            <br /> DevSecOps
+            <br />
+            Analysis of Alternatives
+            <br /> Technology Assessment Services
+            <br /> Full Stack Development
+            <br /> Staff Augmentation Services
+          </p>
+        </div>
+      )}
+      {productsOpen && (
+        <div className="Product-dropdown">
+          <p>
+            Jumping Course<br/> Corrosion Inspection Management<br /> Laboratory
+            information management system
+            
+          </p>
+        </div>
+      )}
       {industriesOpen && (
         <div className="industries-dropdown">
           <div className="industries-content">
             <div className="industries-column">
               <h3>Industry Specific Expert-Driven Solutions.</h3>
-              <p>Domain-specific AI and analytics-driven technology solutions to help you achieve your industry-specific goals.</p>
+              <p>
+                Domain-specific AI and analytics-driven technology solutions to
+                help you achieve your industry-specific goals.
+              </p>
             </div>
             <div className="industries-column">
               <h3>Financial Institution</h3>
@@ -128,11 +170,20 @@ function Navbar() {
       {/* Resources Popup */}
       {resourcesOpen && (
         <div className="resources-overlay" onClick={toggleResources}>
-          <div className="resources-content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="resources-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="resources-container">
               <div className="resources-left">
-                <h3>Enhance Your Knowledge of AI-Driven Low-Code and No-Code Technology.</h3>
-                <p>Discover valuable insights and experiences to strengthen your business.</p>
+                <h3>
+                  Enhance Your Knowledge of AI-Driven Low-Code and No-Code
+                  Technology.
+                </h3>
+                <p>
+                  Discover valuable insights and experiences to strengthen your
+                  business.
+                </p>
               </div>
               <div className="resources-right">
                 <h3>Resources</h3>

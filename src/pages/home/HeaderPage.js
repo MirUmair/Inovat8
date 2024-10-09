@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import "../../styles/HeaderPage.css"; 
-import Navbar from "../../components/Navbar"; 
+import "../../styles/HeaderPage.css";
+import Navbar from "../../components/Navbar";
 import image from "../../assets/images";
 const Header = () => {
   const texts = [
@@ -27,6 +27,9 @@ const Header = () => {
 
   const hideDuration = 1000; // Duration for hiding the text
   const showDuration = 4000; // Duration to show the text (before hiding again)
+  useEffect(() => {
+    setIsAnimating(true);
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       // Trigger hide animation first
