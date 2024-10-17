@@ -1,40 +1,82 @@
 import React from "react";
 import "../../styles/InnovateSection.css";
+import images from "../../assets/images";
 const InnovateSection = () => {
   return (
     <div className="innovate-section">
       <div className="innovate-content">
         <div className="innovate-left">
-          <h1>
-            <strong>Innovate</strong> with <br />
+          <p className="h-inovate">
+            <strong className="strong-c">Innovate</strong> with <br />
             Low Code/No Code and <br />
             AI-Powered Technologies
-          </h1>
+          </p>
         </div>
         <div className="innovate-right">
           <p>
-            Effortlessly explore the realm of low-code/no-code solutions and
-            AI-powered full-stack development, customized for your business
-            needs. Discover the innovative tools we utilize and the unique
-            features they offer, streamlining your journey through this
-            cutting-edge technology.
+            Effortlessly explore the realm of low-code/no-code
+            <br /> solutions and AI-powered full-stack <br />
+            development, customized for your business
+            <br />
+            needs. Discover the innovative tools we utilize <br />
+            and the unique features they offer,
+            <br /> streamlining your journey through this cutting-edge
+            technology.
           </p>
         </div>
       </div>
-      <div className="innovate-action">
-        <p>
-          Let's get <strong>innovative</strong> <span>&#8594;</span>
+      <div
+        className="textcontent"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          gap: "5px",
+        }}
+      >
+        <p className="inovatescetion" style={{ margin: 0 }}>
+          Let's get
         </p>
+        <p className="inovatescetion1" style={{ margin: 0 }}>
+          innovative
+        </p>
+        <img
+          src={images.i22}
+          alt="icon"
+          style={{
+            width: "60px",
+            height: "60px",
+            marginLeft: "0px",
+            marginTop: "5px",
+          }}
+        />
       </div>
-      <div className="innovate-logos">
-        <img src="/path/to/flutterflow-logo.png" alt="FlutterFlow" />
-        <img src="/path/to/mendix-logo.png" alt="Mendix" />
-        <img src="/path/to/bubble-logo.png" alt="Bubble" />
-        <img src="/path/to/webflow-logo.png" alt="Webflow" />
-        <img src="/path/to/softr-logo.png" alt="Softr" />
+      <div className="innovate-logos-ticker">
+        <div className="logos-wrapper">
+          <img src={images.i34} alt="FlutterFlow" />
+          <img src={images.i35} alt="Mendix" />
+          <img src={images.i36} alt="bubble" />
+          <img src={images.i37} alt="webflow" />
+          <img src={images.i38} alt="softr" />
+          {/* Duplicating the images for seamless looping */}
+          <img src={images.i34} alt="FlutterFlow" />
+          <img src={images.i35} alt="Mendix" />
+          <img src={images.i36} alt="bubble" />
+          <img src={images.i37} alt="webflow" />
+          <img src={images.i38} alt="softr" />
+          <img src={images.i34} alt="FlutterFlow" />
+          <img src={images.i35} alt="Mendix" />
+          <img src={images.i36} alt="bubble" />
+          <img src={images.i37} alt="webflow" />
+          <img src={images.i38} alt="softr" />
+          <img src={images.i34} alt="FlutterFlow" />
+          <img src={images.i35} alt="Mendix" />
+          <img src={images.i36} alt="bubble" />
+          <img src={images.i37} alt="webflow" />
+          <img src={images.i38} alt="softr" />
+        </div>
       </div>
     </div>
   );
 };
-
 export default InnovateSection;

@@ -4,11 +4,9 @@ import "../../styles/MiddleHeader.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import images from "../../assets/images";
-
 const HeaderPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef(null);
-
   const slides = [
     {
       title: "AI/ML",
@@ -42,7 +40,6 @@ const HeaderPage = () => {
   useEffect(() => {
     updateSliderPosition();
   }, [currentIndex]);
-
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
   };
@@ -56,13 +53,11 @@ const HeaderPage = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-
   // Using useInView hook to trigger animation for What We Offer section
   const { ref: whatWeOfferRef, inView: whatWeOfferInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
   return (
     <div>
       {/* Trusted By Section */}
@@ -75,68 +70,209 @@ const HeaderPage = () => {
         <div className="trusted-by-title">
           <h2>— Trusted By</h2>
         </div>
-        <div className="trusted-logos">
-          <img
-            className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`}
-            src={images.icon1}
-            alt="Ufone Logo"
-          />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`} 
-            src={images.icon2} alt="Urban Point Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`} 
-            src={images.icon3} alt="Ericsson Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`} 
-            src={images.icon4} alt="Nokia Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`}
-            src={images.icon5} alt="Zong Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`}
-            src={images.icon6} alt="Huawei Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`} 
-            src={images.icon7} alt="ZTE Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`} 
-            src={images.icon8} alt="Huawei Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`}
-            src={images.icon9} alt="ZTE Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`}
-            src={images.icon10} alt="Zong Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`}
-            src={images.icon11} alt="Huawei Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`}
-            src={images.icon12} alt="ZTE Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`}src={images.icon13} alt="Huawei Logo" />
-          <img className={`trusted-by-section ${
-              trustedByInView ? "slide-in" : "hidden"
-            }`}src={images.icon14} alt="ZTE Logo" />
+        <div className="trusted-logos-ticker">
+          <div className="trusted-logos-ticker">
+            <div className="trusted-logos-wrapper">
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon1}
+                alt="Ufone Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon2}
+                alt="Urban Point Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon3}
+                alt="Ericsson Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon4}
+                alt="Nokia Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon5}
+                alt="Zong Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon6}
+                alt="Huawei Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon7}
+                alt="ZTE Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon8}
+                alt="Huawei Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon9}
+                alt="ZTE Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon10}
+                alt="Zong Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon11}
+                alt="Huawei Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon12}
+                alt="ZTE Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon13}
+                alt="Huawei Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon14}
+                alt="ZTE Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon1}
+                alt="Ufone Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon2}
+                alt="Urban Point Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon3}
+                alt="Ericsson Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon4}
+                alt="Nokia Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon5}
+                alt="Zong Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon6}
+                alt="Huawei Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon7}
+                alt="ZTE Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon8}
+                alt="Huawei Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon9}
+                alt="ZTE Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon10}
+                alt="Zong Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon11}
+                alt="Huawei Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon12}
+                alt="ZTE Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon13}
+                alt="Huawei Logo"
+              />
+              <img
+                className={`trusted-by-section ${
+                  trustedByInView ? "slide-in" : "hidden"
+                }`}
+                src={images.icon14}
+                alt="ZTE Logo"
+              />
+            </div>
+          </div>
         </div>
-
       </section>
-
       {/* What We Offer Section */}
       <section
         className={`innovation-section ${
@@ -179,6 +315,24 @@ const HeaderPage = () => {
               ❯
             </button>
           </div>
+          //////////////////////////
+          {/* <div className="slider-container">
+      <button className="prev" onClick={prevSlide}>
+        &lt;
+      </button>
+      <div className="slider" style={{ transform: `translateX(-${currentIndex * 100}vw)` }}>
+        {slides.map((slide, index) => (
+          <div className="slide" key={index}>
+            <h3>{slide.title}</h3>
+            <p>{slide.content}</p>
+          </div>
+        ))}
+      </div>
+      <button className="next" onClick={nextSlide}>
+        &gt;
+      </button>
+    </div>
+          /////////////////////////      */}
           <div className="slider-container">
             <div className="slider" ref={sliderRef}>
               {slides.map((slide, index) => (
@@ -194,5 +348,4 @@ const HeaderPage = () => {
     </div>
   );
 };
-
 export default HeaderPage;

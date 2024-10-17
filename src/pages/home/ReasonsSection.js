@@ -1,31 +1,31 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import images from "../../assets/images";
 import "../../styles/ReasonsSection.css"; // Import your CSS file
-
-const Reason = ({ title, description, delay }) => {
+const Reason = ({ title, description, delay, image }) => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger animation only once
     threshold: 0.1, // Trigger when 10% of the component is visible
   });
-
   return (
     <div
       className={`reason ${inView ? "slide-in" : "hidden"}`}
       ref={ref}
       style={{ animationDelay: `${delay}s` }}
     >
+      <img src={image} style={{ width: "100px", height: "10 0px" }} />
       <h4>{title}</h4>
       <p>{description}</p>
     </div>
   );
 };
-
 const ReasonsSection = () => {
   return (
     <section className="reasons-section">
       <h3>— Reasons why Innov8 is worth being your Tech Partner!</h3>
       <div className="reasons-grid">
         <Reason
+          image={images.i28}
           title="Cross Platform"
           description={
             <>
@@ -43,6 +43,7 @@ const ReasonsSection = () => {
           delay={0.1}
         />
         <Reason
+          image={images.i30}
           title="Strategic Approach"
           description={
             <>
@@ -57,6 +58,7 @@ const ReasonsSection = () => {
           delay={0.3}
         />
         <Reason
+          image={images.i29}
           title="Scalability"
           description={
             <>
@@ -75,6 +77,7 @@ const ReasonsSection = () => {
           delay={0.5}
         />
         <Reason
+          image={images.i31}
           title="Continued Project Support"
           description={
             <>
@@ -93,5 +96,4 @@ const ReasonsSection = () => {
     </section>
   );
 };
-
 export default ReasonsSection;

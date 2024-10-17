@@ -12,6 +12,7 @@
 .logo {
   max-width: 13vw;
 }
+
 /* Hamburger menu for mobile */
 .hamburger {
   display: none;
@@ -26,6 +27,7 @@
   margin: 4px 0;
   transition: 0.4s;
 }
+
 .bg {
   max-width: 13vw;
   opacity: 0.2;
@@ -45,7 +47,7 @@
   list-style: none;
   display: flex;
   align-self: flex-start;
-  margin-right: 28vw;
+  margin-right: 16vw;
 }
 
 .nav-list.active {
@@ -57,11 +59,18 @@
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 99;
 }
-
+.background-icon{
+  margin-top: 12%;
+    width: 35%;
+    /* top: -137px; */
+    position: absolute;
+    left: 0px;
+}
 .nav-item {
   color: white;
   margin-right: 5%;
   cursor: pointer;
+  margin-top: 2px;
   position: relative;
   font-family: "BauhausStd-Light";
   white-space: nowrap;
@@ -73,7 +82,7 @@
   align-items: right;
   margin-top: 2px;
   margin-left: 40px;
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   color: white;
   cursor: pointer;
   position: relative;
@@ -81,17 +90,14 @@
   white-space: nowrap;
   font-weight: lighter;
 }
-.nav-list :hover {
-  padding: 5px;
-  background-color: #f3f3f3;
-  border-radius: 10px;
-  color: black;
-}
 
 /* Dropdown arrow */
 .arrow {
+  color: rgb(244, 240, 255);
+  display: inline-block;
+  transform: rotate(180deg);
   margin-left: 5px;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 /* Dropdown container */
@@ -99,234 +105,102 @@
   position: relative;
 }
 
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  list-style: none;
-  padding: 10px 0;
-  border-radius: 5px;
-  display: none;
-  z-index: 100;
-  min-width: 150px;
+/* .nav-item.dropdown-container.active {
+  background-color: #ffff;
+    border-radius: 10px;
+    color: #001f7f;
+  
+    padding-top: 15px;
+    padding-bottom: 30px;
+    z-index: 1;
+    padding-left: 12px;
+    padding-right: 12px;
+} */
+
+/*  */
+.nav-item.dropdown-container.active {
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: #001f7f;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  padding-left: 12px;
+  padding-right: 12px;
+  /* z-index: -1; */
+  max-width: 400px; /* Limit the max-width for better readability */
+  width: 100%; /* Allow full width for mobile */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Adding some shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transition for better UX */
 }
 
-.nav-item:hover .dropdown {
-  display: block;
-}
-
-.dropdown-item {
-  padding: 10px 20px;
-  color: white;
-  white-space: nowrap;
-  transition: background-color 0.3s;
-  font-size: 14px;
-}
-
-.dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Industries Section*/
-.industries-dropdown {
-  position: absolute;
-  top: 70px; /* Adjust for the height of the navbar */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 1200px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
-}
-
-.industries-content {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-}
-
-.industries-column {
-  flex: 1;
-  padding: 0 20px;
-}
-
-.industries-column h3 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  font-weight: 600;
-  font-family: "Bauhaus";
-}
-
-.industries-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.industries-column ul li {
-  margin-bottom: 8px;
-  font-size: 0.9em;
-  font-family: "BauhausStd-Light";
-}
-
-.industries-column p {
-  font-size: 0.9em;
-  line-height: 1.4;
-}
-
-.industries-all {
-  text-align: right;
-  margin-top: 20px;
-}
-
-.industries-button {
-  background-color: #001f7f;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 0.9em;
-}
-
-.industries-button:hover {
-  background-color: #0053ba;
-}
-/*Industries Section Adjust for mobile phones */
+/* Adjust for mobile */
+/* Industries Dropdown for Mobile */
 @media (max-width: 768px) {
   .industries-dropdown {
-    position: absolute;
-    width: 80%;
+    width: 90%; /* Reduce width for smaller screens */
+    max-width: 400px; /* Limit the maximum width */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 15px; /* Adjust padding to be less on mobile */
+    top: 60px; /* Position the dropdown closer to the navbar */
+    font-size: 14px; /* Smaller font size for better fit */
   }
+
   .industries-content {
-    flex-direction: column;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 0.9em;
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    justify-content: flex-start;
+    padding: 10px 0; /* Adjust padding */
   }
 
   .industries-column {
-    margin-bottom: 20px;
+    padding: 10px 0; /* Less padding for mobile */
+    margin-bottom: 15px;
   }
 
-  .industries-all {
-    text-align: center;
-  }
-}
-
-/*Partner Section css*/
-.popup-overlay {
-  position: absolute;
-  top: 60px;
-  right: 15vw;
-  width: 514px; /* Set width for larger screens */
-  height: 256px;
-  transform: scale(1.3786, 1.3786);
-  transform-origin: 0px 0px;
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-.popup-heading {
-  font-family: "Arial", sans-serif;
-  font-size: 22px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 15px;
-  font-family: "Bauhaus";
-}
-
-.partner-logos {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 3vw;
-}
-
-.partner-logos img {
-  max-width: 200px; /* Adjust the size of the logos */
-  height: auto;
-}
-
-/* Responsive adjustments for tablets */
-@media (max-width: 1024px) {
-  .popup-overlay {
-    right: 10vw; /* Adjust position for smaller screens */
-    width: 80%; /* Make the popup take 80% of the width */
-    height: auto; /* Make height dynamic based on content */
-    transform: scale(1); /* Reset scale */
+  .industries-column h3 {
+    font-size: 1.1em; /* Adjust heading size */
   }
 
-  .popup-heading {
-    font-size: 20px; /* Reduce heading size */
+  .industries-column ul li {
+    font-size: 1em; /* Adjust list item font size */
+    line-height: 1.2;
   }
 
-  .partner-logos {
-    margin-top: 2vw; /* Adjust margin for smaller screens */
-  }
-
-  .partner-logos img {
-    max-width: 150px; /* Resize logos */
+  .industries-button {
+    font-size: 0.8em; /* Smaller font for the button */
+    padding: 8px 12px; /* Adjust padding for the button */
   }
 }
 
-/* Patner Section Responsive adjustments for mobile phones */
-@media (max-width: 768px) {
-  .popup-overlay {
-    top: 50px; /* Adjust top position */
-    right: 5vw; /* Adjust right position */
-    width: 90%; /* Make popup take 90% of the width */
-    padding: 15px; /* Reduce padding */
-  }
-
-  .popup-heading {
-    font-size: 18px; /* Reduce font size further */
-  }
-
-  .partner-logos {
-    flex-direction: column; /* Stack logos vertically on small screens */
-  }
-
-  .partner-logos img {
-    max-width: 120px; /* Further reduce the logo size */
-    margin-bottom: 10px; /* Add spacing between stacked logos */
-  }
-}
-
-/* Responsive adjustments for very small devices (phones) */
+/* Further adjustments for very small devices (phones) */
 @media (max-width: 480px) {
-  .popup-overlay {
-    top: 40px; /* Adjust for even smaller screens */
-    width: 95%; /* Make popup nearly full width */
-    padding: 10px; /* Further reduce padding */
+  .industries-dropdown {
+    width: 95%; /* Take full width on very small screens */
+    padding: 8px 10px; /* Reduce padding */
+    max-width: 350px; /* Smaller max-width for small phones */
   }
 
-  .popup-heading {
-    font-size: 16px; /* Reduce heading size further */
+  .industries-column h3 {
+    font-size: 1em; /* Reduce font size for headings */
   }
 
-  .partner-logos img {
-    max-width: 100px; /* Adjust logo size for very small screens */
+  .industries-column ul li {
+    font-size: 1em; /* Further reduce list item font size */
+    line-height: 1.2;
+  }
+
+  .industries-button {
+    font-size: 0.7em; /* Adjust button font size */
+    padding: 6px 10px; /* Smaller padding for the button */
   }
 }
-
 .resources-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  
   display: flex;
   justify-content: end;
   align-items: center;
@@ -338,8 +212,8 @@
   display: flex;
   position: absolute;
   top: 8%;
-  right: 15%;
-  background: rgb(238, 238, 238);
+  right:21%;
+  background: rgb(251, 251, 251);
   width: 514.277px;
   height: 256px;
   transform: scale(1.3786, 1.3786);
@@ -359,12 +233,12 @@
 .resources-left h3 {
   font-size: 1.2em;
   font-weight: bold;
-  color: #333;
+  color: #001f7f;
 }
 
 .resources-left p {
-  font-size: 0.8em;
-  color: #555;
+  font-size: 1em;
+  color: #022d62;
   font-family: "BauhausStd-Light";
 }
 
@@ -375,7 +249,7 @@
 .resources-right h3 {
   font-size: 1.2em;
   font-weight: bold;
-  color: #333;
+  color: #001f7f;
   margin-bottom: 10px;
 }
 
@@ -386,7 +260,7 @@
 
 .resources-right ul li {
   margin-bottom: 8px;
-  font-size: 0.8em;
+  font-size: 1em;
   font-family: "BauhausStd-Light";
 }
 
@@ -411,7 +285,7 @@
     color: #333;
   }
   .resources-left p {
-    font-size: 0.7em;
+    font-size: 1em;
     color: #555;
   }
   .resources-right {
@@ -424,26 +298,109 @@
     margin-bottom: 10px;
   }
   .resources-right ul {
-    font-size: 0.7em;
+    font-size: 1em;
   }
   .resources-right ul li {
     margin-bottom: 5px;
   }
 }
 
-/* Mobile responsiveness */
-@media (max-width: 1024px) {
-  .nav-list {
-    margin-left: 0;
-    flex-wrap: wrap;
-  }
 
-  .nav-item {
-    margin-right: 2%;
-    font-size: 14px;
-  }
+.nav-item .arrow.active {
+  color: #001f7f;
+  transform: rotate(180deg);
 }
 
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  display: none;
+  z-index: 100;
+  min-width: 150px;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  color: white;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Industries Section */
+.industries-dropdown {
+  position: absolute;
+  top: 78px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.industries-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.industries-column {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.industries-column h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: "Bauhaus";
+  height: 20%;
+}
+
+.industries-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.industries-column ul li {
+  margin-bottom: 8px;
+  font-size: 1.em;
+  font-family: "BauhausStd-Light";
+}
+
+.industries-all {
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-end;
+}
+.industries-button {
+  color: #001f7f;
+  font-size: 1.4em;
+  font-family: "Bauhaus";
+}
+
+.industries-button:hover {
+  background-color: #0053ba;
+}
+
+/* Mobile responsiveness */
+
+/* Hide navigation by default for mobile */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: row;
@@ -455,18 +412,27 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Optional: Add background for mobile view */
+    position: absolute;
+    top: 60px; /* Adjust this based on your header height */
+    left: 0;
+    z-index: 99;
+  }
+
+  .nav-list.active {
+    display: flex;
   }
 
   .hamburger {
     display: flex;
+    cursor: pointer;
+    flex-direction: column;
   }
 
   .nav-item {
     margin: 10px 0;
-  }
-
-  .cta {
-    align-self: flex-end;
+    font-size: 1em;
+    padding: 10px;
   }
 }
 
@@ -478,53 +444,29 @@
   .logo {
     max-width: 80px;
   }
-
-  .cta {
-    padding: 8px 16px;
-  }
 }
+
+/* Additional dropdown styles */
 .Services-dropdown {
   position: absolute;
-  top: 70px; /* Adjust for the height of the navbar */
-  left: 30%;
-  width: 17%;
+  top: 60%;
+  left: 45%;
+  max-width: 400px !important;
   transform: translateX(-50%);
   background-color: white;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 1vw;
+  border-radius: 1vw;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   z-index: 1000;
 }
-.Services-dropdown p {
-  font-size: 1.2em;
-}
-
-
 .Product-dropdown {
   position: absolute;
-  top: 70px; /* Adjust for the height of the navbar */
-  left: 37%;
-  width: 17%;
-  transform: translateX(-50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
-}
-.Product-dropdown p {
-  font-size: 1.2em;
-}
-.Product-dropdown {
-  position: absolute;
-  top: 70px; /* Adjust for the height of the navbar */
+  top: 78px;
   left: 50%;
-  width: 90%; /* Full width for small screens */
-  max-width: 300px; /* Set a maximum width for larger screens */
+  width: 100%;
+  max-width: 300px;
   transform: translateX(-50%);
   background-color: white;
   padding: 20px;
@@ -533,69 +475,119 @@
   display: flex;
   flex-direction: column;
   z-index: 1000;
+}
+
+.Services-dropdown p,
+.Product-dropdown p {
+  padding-left: 12px;
+  font-size: 1.3em;
+  line-height: 1.3rem;
 }
 
 /* For larger screens */
-@media (min-width: 768px) {
-  .Product-dropdown {
-    width: 50%; /* Adjust width for medium-sized screens */
+/* @media (min-width: 768px) {
+  .Product-dropdown,
+  .Services-dropdown {
+    width: 50%;
   }
-}
+} */
 
 @media (min-width: 1024px) {
   .Product-dropdown {
-    width: 17%; /* Adjust width for larger screens */
-    left: 37%; /* Adjust the position for larger screens */
+    width: 17%;
+    left: 53%;
   }
 }
+/* @media (min-width: 1024px) {
 
-.Product-dropdown p {
-  font-size: 1.2em;
-}
+  .Services-dropdown {
+    width: 17%;
+    left: 45%;
+  }
+} */
 
-/* Adjust text size for small screens */
 @media (max-width: 767px) {
-  .Product-dropdown p {
+  .Product-dropdown p,
+  .Services-dropdown p {
     font-size: 1em;
   }
 }
-.Product-dropdown {
+
+/* Partner Section */
+.popup-overlay {
   position: absolute;
-  top: 70px; /* Adjust for the height of the navbar */
-  left: 50%;
-  width: 90%; /* Full width for small screens */
-  max-width: 300px; /* Set a maximum width for larger screens */
-  transform: translateX(-50%);
-  background-color: white;
+  top: 78px;
+  right: 28vw;
+  width: 514px;
+  height: 256px;
+  transform: scale(1.3786, 1.3786);
+  transform-origin: 0px 0px;
+  background: white;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
   z-index: 1000;
 }
 
-/* For larger screens */
-@media (min-width: 768px) {
-  .Product-dropdown {
-    width: 50%; /* Adjust width for medium-sized screens */
+.popup-heading {
+  font-family: "Bauhaus";
+  font-size: 22px;
+  font-weight: bold;
+  color: #001f7f;
+  margin-bottom: 15px;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3vw;
+}
+
+.partner-logos img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 768px) {
+  .popup-overlay {
+    top: 50px;
+    right: 5vw;
+    width: 90%;
+    padding: 15px;
+  }
+
+  .popup-heading {
+    font-size: 18px;
+  }
+
+  .partner-logos {
+    flex-direction: column;
+  }
+
+  .partner-logos img {
+    max-width: 120px;
+    margin-bottom: 10px;
   }
 }
 
-@media (min-width: 1024px) {
-  .Product-dropdown {
-    width: 17%; /* Adjust width for larger screens */
-    left: 37%; /* Adjust the position for larger screens */
+/* Responsive adjustments for very small devices (phones) */
+@media (max-width: 480px) {
+  .popup-overlay {
+    top: 40px;
+    width: 95%;
+    padding: 10px;
+  }
+
+  .popup-heading {
+    font-size: 16px;
+  }
+
+  .partner-logos img {
+    max-width: 100px;
   }
 }
-
-.Product-dropdown p {
-  font-size: 1.2em;
-}
-
-/* Adjust text size for small screens */
-@media (max-width: 767px) {
-  .Product-dropdown p {
-    font-size: 1em;
-  }
+.Industries-icon{
+  width: 4vw;
 }

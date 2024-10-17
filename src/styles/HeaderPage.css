@@ -1,11 +1,8 @@
-/* Define the font-face */
 @font-face {
   font-family: 'BauhausStd-Light';
   src: url('../assets/fonts/BauhausStd-Light.ttf') format('truetype');
   font-weight: 300;
 }
-
-/* Global styles for full-height elements and background */
 html,
 body {
   height: 100%;
@@ -13,7 +10,6 @@ body {
   padding: 0;
   font-family: 'BauhausStd-Light';
 }
-
 .App {
   height: 100%;
   background: linear-gradient(to bottom right, #000000, #3533CD);
@@ -21,20 +17,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
 .scrollable-content {
   height: 100%;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-
-/* Hide scrollbars */
 ::-webkit-scrollbar {
   display: none;
 }
-
-/* Content styling */
 .content {
   display: flex;
   flex-direction: row;
@@ -45,14 +36,13 @@ body {
   width: 95vw;
   margin: auto;
 }
-
 .textcontent {
+  position: relative;
   display: flex;
   flex-direction: row;
   margin-left: 6vw;
   margin-bottom: 3vw;
 }
-
 /* Text content styling */
 .textbottom {
   font-size: 2vw;
@@ -60,15 +50,12 @@ body {
   color: white;
   font-family: 'BauhausStd-Light';
 }
-
 .textbottom1 {
   font-size: 2vw;
   color: white;
   font-family: 'Bauhaus';
   margin-left: 1rem;
 }
-
-/* Keyframes for text animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -79,8 +66,6 @@ body {
     transform: translateX(0px);
   }
 }
-
-/* Text animation and styling */
 .animateIn {
   text-align: left;
   font-size: 2rem;
@@ -90,20 +75,15 @@ body {
   animation: fadeIn 1s ease-in;
   padding: 5%;
 }
-
 .animateIn.show {
   opacity: 1;
   animation: slideIn 1s ease-in forwards;
 }
-
-/* Lightbulb image styling */
 .image {
   max-width: 35vw;
   height: auto;
   margin: auto;
 }
-
-/* Media query for smaller screens */
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
@@ -111,19 +91,15 @@ body {
     align-items: center;
     height: auto;
   }
-
   .animateIn {
     font-size: 2.5rem;
     padding: 2vw;
   }
-
   .image {
     max-width: 50vw;
     height: auto;
   }
 }
-
-/* Text animation and styling */
 .text {
   text-align: left;
   font-size: 4.0vw;
@@ -134,61 +110,54 @@ body {
   transform: translateX(10px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
-
 .contentText {
   margin-left: 5vw;
   padding-top: 10vh;
   height: auto;
 }
-
 .text.show {
   opacity: 1;
   transform: translateX(0);
 }
-
 .text.hide {
   opacity: 0;
   transform: translateX(-30px);
 }
-
-/* Media query for extra small screens */
 @media (max-width: 480px) {
   .animateIn {
     font-size: 2rem;
   }
-
   .image {
     max-width: 60vw;
     height: auto;
   }
 }
-
 /* Paragraph font settings */
 p {
   font-family: 'Bauhaus2', sans-serif;
   font-size: 4vw;
 }
-
-/* Adjust text for very small screens */
 @media (max-width: 360px) {
   .textbottom,
   .textbottom1 {
     font-size: 3.5vw;
   }
-
   .text {
     font-size: 6vw;
   }
-
   .animateIn {
     font-size: 3.5rem;
   }
-
   .image {
     max-width: 90vw;
   }
-
   p {
     font-size: 5vw;
   }
+}
+.icon-background{
+  transform: rotate(180deg);
+  position:absolute;
+  margin-bottom: 100px;
+  right: 10px;
 }

@@ -1,11 +1,10 @@
-/* Reasons Section */
 .reasons-section {
   background: linear-gradient(to bottom right, #000000, #3533CD);
   padding: 40px;
 }
 .reasons-section h3 {
   font-family: 'Bauhaus';
-  color: #f3f4f7;
+  color: #F3F4F7;
   font-size: 2em;
 }
 .reason {
@@ -15,39 +14,33 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .reason h4 {
-  color: #f3f4f7;
+  color: #F3F4F7;
   font-family: 'Bauhaus';
   font-size: 1.3em;
 }
 .reason p {
   margin-top: 10px;
   font-size: 1em;
-  color: #f3f4f7;
+  color: #F3F4F7;
 }
 .reasons-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
 .hidden {
   opacity: 0;
-  transform: translateX(-50px); /* Initially offscreen */
+  transform: translateX(-50px);
 }
-
 .slide-in {
   opacity: 1;
-  transform: translateX(0); /* Slide in to the correct position */
+  transform: translateX(0);
 }
-
-
-/* Media Queries for responsiveness */
 @media (max-width: 1024px) {
   .reasons-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 768px) {
   .reasons-grid {
     grid-template-columns: 1fr;
