@@ -16,15 +16,15 @@ const Header = () => {
     "Innovate with MENDIX: 10X faster enterprise solutions",
   ];
   const images = useMemo(
-    () => [image.lightbulb1, "", image.lightbulb3, image.lightbulb4],
+    () => [image.lightbulb1, image.i26, image.lightbulb3, image.i27],
     [image]
   );
   // State to track current text index and animation state
   const [currentText, setCurrentText] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const textRef = useRef(null);
-  const hideDuration = 1000; // Duration for hiding the text
-  const showDuration = 4000; // Duration to show the text (before hiding again)
+  const hideDuration = 1000;
+  const showDuration = 4000;
   useEffect(() => {
     setIsAnimating(true);
   }, []);
@@ -45,49 +45,46 @@ const Header = () => {
   return (
     <div className="App">
       <Navbar />
-      <div className="content">
-        <div className="contentText">
-          <p className={`text ${isAnimating ? "show" : "hide"}`} ref={textRef}>
-            {texts[currentText].split(" ").slice(0, 3).join(" ")}
-            <br />
-            {texts[currentText].split(" ").slice(3).join(" ")}
-          </p>
-          <p className="textbottom">{text2[currentText]}</p>
+      <div className="contentType">
+        <div className="content">
+          <div className="contentText">
+            <p
+              className={`text ${isAnimating ? "show" : "hide"}`}
+              ref={textRef}
+            >
+              {texts[currentText].split(" ").slice(0, 3).join(" ")}
+              <br />
+              {texts[currentText].split(" ").slice(3).join(" ")}
+            </p>
+            <p className="textbottom">{text2[currentText]}</p>
+          </div>
+          {images[currentText] && (
+            <img
+              src={images[currentText]}
+              alt="Lighting bulb"
+              className="image"
+            />
+          )}
         </div>
-        {images[currentText] && (
+        <div className="textcontent">
+          <p className="textbottom" style={{ margin: 0 }}>
+            Let's get
+          </p>
+          <p className="textbottom1" style={{ margin: 0 }}>
+            innovative
+          </p>
           <img
-            src={images[currentText]}
-            alt="Lighting bulb"
-            className="image"
+            src={image.i23}
+            alt="icon"
+            style={{
+              width: "20px",
+              height: "20px",
+              marginLeft: "0px",
+              marginTop: "6px",
+            }}
           />
-        )}
-      </div>
-      <div
-        className="textcontent"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-start",
-          gap: "5px",
-        }}
-      >
-        <p className="textbottom" style={{ margin: 0 }}>
-          Let's get
-        </p>
-        <p className="textbottom1" style={{ margin: 0 }}>
-          innovative
-        </p>
-        <img
-          src={image.i23}
-          alt="icon"
-          style={{
-            width: "60px",
-            height: "60px",
-            marginLeft: "0px",
-            marginTop: "5px",
-          }}
-        />
-        <img className="icon-background" src={image.icon33} />
+          <img className="icon-background" src={image.icon33} />
+        </div>
       </div>
     </div>
   );

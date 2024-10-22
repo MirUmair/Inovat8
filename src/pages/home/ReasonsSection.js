@@ -13,7 +13,7 @@ const Reason = ({ title, description, delay, image }) => {
       ref={ref}
       style={{ animationDelay: `${delay}s` }}
     >
-      <img src={image} style={{ width: "100px", height: "10 0px" }} />
+      <img src={image} style={{ width: "30px", height: "10 0px" }} />
       <h4>{title}</h4>
       <p>{description}</p>
     </div>

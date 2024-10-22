@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Bauhaus:wght@400;700&display=swap");
+
 @font-face {
-  font-family: 'BauhausStd-Light';
-  src: url('../assets/fonts/BauhausStd-Light.ttf') format('truetype');
+  font-family: "BauhausStd-Light";
+  font-family: "Bauhaus";
+  src: url("../assets/fonts/BauhausStd-Light.ttf") format("truetype");
+  src: url("../assets/fonts/BauhausStd-Bold.ttf") format("truetype");
   font-weight: 300;
 }
 html,
@@ -8,14 +12,11 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'BauhausStd-Light';
+  font-family: "BauhausStd-Light";
 }
 .App {
   height: 100%;
-  background: linear-gradient(to bottom right, #000000, #3533CD);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background: linear-gradient(to bottom right, #000000, #3533cd);
 }
 .scrollable-content {
   height: 100%;
@@ -26,34 +27,38 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+.contentType {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 2vw;
-  height: 70vh;
+  height: 66vh;
   width: 95vw;
-  margin: auto;
 }
 .textcontent {
   position: relative;
   display: flex;
   flex-direction: row;
   margin-left: 6vw;
-  margin-bottom: 3vw;
+  margin-bottom: 7vw;
 }
 /* Text content styling */
 .textbottom {
   font-size: 2vw;
-  margin-left: 1vw;
+  margin-left: 0.3vw;
   color: white;
-  font-family: 'BauhausStd-Light';
+  font-family: "BauhausStd-Light";
 }
 .textbottom1 {
   font-size: 2vw;
   color: white;
-  font-family: 'Bauhaus';
+  font-family: "Bauhaus";
   margin-left: 1rem;
 }
 @keyframes fadeIn {
@@ -70,7 +75,7 @@ body {
   text-align: left;
   font-size: 2rem;
   color: white;
-  font-family: 'Bauhaus', sans-serif;
+  font-family: "Bauhaus", sans-serif;
   font-weight: bold;
   animation: fadeIn 1s ease-in;
   padding: 5%;
@@ -102,9 +107,9 @@ body {
 }
 .text {
   text-align: left;
-  font-size: 4.0vw;
+  font-size: 4vw;
   color: white;
-  font-family: 'Bauhaus', sans-serif;
+  font-family: "Bauhaus";
   font-weight: bold;
   opacity: 0;
   transform: translateX(10px);
@@ -134,7 +139,7 @@ body {
 }
 /* Paragraph font settings */
 p {
-  font-family: 'Bauhaus2', sans-serif;
+  font-family: "Bauhaus2", sans-serif;
   font-size: 4vw;
 }
 @media (max-width: 360px) {
@@ -155,9 +160,17 @@ p {
     font-size: 5vw;
   }
 }
-.icon-background{
+.icon-background {
   transform: rotate(180deg);
-  position:absolute;
+  position: absolute;
   margin-bottom: 100px;
   right: 10px;
+}
+
+.textcontent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  margin-left: 7%;
 }

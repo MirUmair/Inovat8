@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Navbar.css";
 import images from "../assets/images";
-import logo from "../assets/images/Innovat8.svg";
+import logo from "../assets/images/Innovat8-.svg";
 import mendix from "../assets/images/mendix-logo.png";
 import aws from "../assets/images/aws-logo.png";
 function Navbar() {
@@ -74,7 +76,9 @@ function Navbar() {
           onClick={() => toggleNavBar("Services")}
         >
           Services{" "}
-          <span className={`arrow ${servicesOpen ? "active" : ""}`}>^</span>
+          <span className={`arrow ${servicesOpen ? "active" : ""}`}>
+            <FontAwesomeIcon icon={faChevronUp} />
+          </span>
         </li>
         <li
           className={`nav-item dropdown-container ${
@@ -83,7 +87,9 @@ function Navbar() {
           onClick={() => toggleNavBar("Products")}
         >
           Products{" "}
-          <span className={`arrow ${productsOpen ? "active" : ""}`}>^</span>
+          <span className={`arrow ${productsOpen ? "active" : ""}`}>
+            <FontAwesomeIcon icon={faChevronUp} />
+          </span>
         </li>
         <li
           className={`nav-item dropdown-container ${
@@ -92,22 +98,10 @@ function Navbar() {
           onClick={() => toggleNavBar("Industries")}
         >
           Industries{" "}
-          <span className={`arrow ${industriesOpen ? "active" : ""}`}>^</span>
+          <span className={`arrow ${industriesOpen ? "active" : ""}`}>
+            <FontAwesomeIcon icon={faChevronUp} />
+          </span>
         </li>
-        {/* <li className={`nav-item dropdown-container ${servicesOpen ? "active" : ""}`}>
-          Our Team <span className="arrow">^</span>
-          <ul className="dropdown">
-            <li className="dropdown-item">Team A</li>
-            <li className="dropdown-item">Team B</li>
-          </ul>
-        </li> */}
-        {/* <li className={`nav-item dropdown-container ${servicesOpen ? "active" : ""}`}>
-          Projects <span className="arrow">^</span>
-          <ul className="dropdown">
-            <li className="dropdown-item">Project A</li>
-            <li className="dropdown-item">Project B</li>
-          </ul>
-        </li> */}
         <li
           className={`nav-item dropdown-container ${
             partnersOpen ? "active" : ""
@@ -115,7 +109,9 @@ function Navbar() {
           onClick={() => toggleNavBar("Partners")}
         >
           Partners{" "}
-          <span className={`arrow ${partnersOpen ? "active" : ""}`}>^</span>
+          <span className={`arrow ${partnersOpen ? "active" : ""}`}>
+            <FontAwesomeIcon icon={faChevronUp} />
+          </span>
         </li>
         <li
           className={`nav-item dropdown-container ${
@@ -124,8 +120,10 @@ function Navbar() {
           onClick={() => toggleNavBar("Resources")}
         >
           Resources{" "}
-          <span className={`arrow ${resourcesOpen ? "active" : ""}`}>^</span>
-        </li>{" "}
+          <span className={`arrow ${resourcesOpen ? "active" : ""}`}>
+            <FontAwesomeIcon icon={faChevronUp} />
+          </span>
+        </li>
         {/* Open resources popup */}
         <li className="nav-item1">Let's Innovate</li>
       </ul>
@@ -143,29 +141,27 @@ function Navbar() {
       )}
       {servicesOpen && (
         <div className="Services-dropdown">
-          <p>
-            Enterprise Mobile App Development
-            <br /> Enterprise Web App Development
-            <br />
-            Data Analytics
-            <br /> Insights & Intelligence
-            <br /> AI/ML Solutions
-            <br /> DevSecOps
-            <br />
-            Analysis of Alternatives
-            <br /> Technology Assessment Services
-            <br /> Full Stack Development
-            <br /> Staff Augmentation Services
-          </p>
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            <li>Enterprise Mobile App Development</li>
+            <li>Enterprise Web App Development</li>
+            <li>Data Analytics</li>
+            <li>Insights & Intelligence</li>
+            <li>AI/ML Solutions</li>
+            <li>DevSecOps</li>
+            <li>Analysis of Alternatives</li>
+            <li>Technology Assessment Services</li>
+            <li>Full Stack Development</li>
+            <li>Staff Augmentation Services</li>
+          </ul>
         </div>
       )}
       {productsOpen && (
         <div className="Product-dropdown">
-          <p>
-            Jumping Course
-            <br /> Corrosion Inspection Management
-            <br /> Laboratory information management system
-          </p>
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            <li>Jumping Course</li>
+            <li>Corrosion Inspection Management</li>
+            <li>Laboratory information management system</li>
+          </ul>
         </div>
       )}
       {industriesOpen && (

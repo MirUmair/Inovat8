@@ -1,7 +1,7 @@
 /* Define the font-face */
 @font-face {
-  font-family: 'BauhausStd-Light';
-  src: url('../assets/fonts/BauhausStd-Light.ttf') format('truetype');
+  font-family: "BauhausStd-Light";
+  src: url("../assets/fonts/BauhausStd-Light.ttf") format("truetype");
   font-weight: 300;
 }
 
@@ -11,13 +11,15 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom right, #000000, #3533CD);
-  font-family: 'BauhausStd-Light';
+  background: linear-gradient(to bottom right, #000000, #3533cd);
+  font-family: "BauhausStd-Light";
+
   /* Add fallback fonts */
 }
 
 /* Scrollable content wrapper */
 .scrollable-content {
+  overflow-x: hidden;
   overflow-y: scroll;
   /* Allows vertical scrolling */
   height: 100vh;
@@ -34,13 +36,13 @@ button {
   margin: 0;
   padding: 0;
   color: #022d62;
-  font-family: 'BauhausStd-Light';
+  font-family: "BauhausStd-Light";
   font-size: small;
 }
 
 p {
   color: #022d62;
-  font-family: 'BauhausStd-Light';
+  font-family: "BauhausStd-Light";
   font-size: small;
 }
 
@@ -50,7 +52,7 @@ h3,
 h4 {
   margin: 0;
   padding: 0;
-  font-family: 'Bauhaus';
+  font-family: "Bauhaus";
   color: #022d62;
 }
 

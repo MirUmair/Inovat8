@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Bauhaus:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "BauhausStd-Light";
+  font-family: "Bauhaus";
+  src: url("../assets/fonts/BauhausStd-Light.ttf") format("truetype");
+  src: url("../assets/fonts/BauhausStd-Bold.ttf") format("truetype");
+  font-weight: 300;
+}
 /* Navbar styles */
 .navbar {
   background-color: transparent;
@@ -59,12 +68,12 @@
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 99;
 }
-.background-icon{
+.background-icon {
   margin-top: 12%;
-    width: 35%;
-    /* top: -137px; */
-    position: absolute;
-    left: 0px;
+  width: 35%;
+  /* top: -137px; */
+  position: absolute;
+  left: 0px;
 }
 .nav-item {
   color: white;
@@ -80,7 +89,6 @@
 
 .nav-item1 {
   align-items: right;
-  margin-top: 2px;
   margin-left: 40px;
   font-size: 1.5vw;
   color: white;
@@ -97,7 +105,6 @@
   display: inline-block;
   transform: rotate(180deg);
   margin-left: 5px;
-  font-size: 16px;
 }
 
 /* Dropdown container */
@@ -105,35 +112,22 @@
   position: relative;
 }
 
-/* .nav-item.dropdown-container.active {
-  background-color: #ffff;
-    border-radius: 10px;
-    color: #001f7f;
-  
-    padding-top: 15px;
-    padding-bottom: 30px;
-    z-index: 1;
-    padding-left: 12px;
-    padding-right: 12px;
-} */
-
-/*  */
 .nav-item.dropdown-container.active {
-  background-color: #ffffff;
-  border-radius: 10px;
+  font-family: "BauhausStd-Light";
+  font-size: 1vw;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   color: #001f7f;
-  padding-top: 15px;
-  padding-bottom: 30px;
-  padding-left: 12px;
-  padding-right: 12px;
-  /* z-index: -1; */
-  max-width: 400px; /* Limit the max-width for better readability */
-  width: 100%; /* Allow full width for mobile */
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Adding some shadow for depth */
-  transition: all 0.3s ease-in-out; /* Smooth transition for better UX */
+  padding-top: 6px;
+  padding-bottom: 17px;
+  padding-left: 9px;
+  padding-right: 9px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Adjust for mobile */
 /* Industries Dropdown for Mobile */
 @media (max-width: 768px) {
   .industries-dropdown {
@@ -158,12 +152,12 @@
   }
 
   .industries-column h3 {
-    font-size: 1.1em; /* Adjust heading size */
+    font-size: 1.1rem; /* Adjust heading size */
   }
 
   .industries-column ul li {
-    font-size: 1em; /* Adjust list item font size */
-    line-height: 1.2;
+    font-size: 1rem; /* Adjust list item font size */
+    line-height: 1em;
   }
 
   .industries-button {
@@ -200,7 +194,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  
+
   display: flex;
   justify-content: end;
   align-items: center;
@@ -211,8 +205,8 @@
   border-radius: 10px;
   display: flex;
   position: absolute;
-  top: 8%;
-  right:21%;
+  top: 60px;
+  right: 21%;
   background: rgb(251, 251, 251);
   width: 514.277px;
   height: 256px;
@@ -233,11 +227,11 @@
 .resources-left h3 {
   font-size: 1.2em;
   font-weight: bold;
-  color: #001f7f;
+  color: #022d62;
 }
 
 .resources-left p {
-  font-size: 1em;
+  font-size: 0.8rem;
   color: #022d62;
   font-family: "BauhausStd-Light";
 }
@@ -249,19 +243,22 @@
 .resources-right h3 {
   font-size: 1.2em;
   font-weight: bold;
-  color: #001f7f;
+  color: #022d62;
   margin-bottom: 10px;
 }
 
 .resources-right ul {
   list-style: none;
   padding: 0;
+  color: #022d62;
+  font-family: "BauhausStd-Light";
 }
 
 .resources-right ul li {
-  margin-bottom: 8px;
-  font-size: 1em;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
   font-family: "BauhausStd-Light";
+  color: #022d62;
 }
 
 @media (max-width: 1024px) {
@@ -305,9 +302,8 @@
   }
 }
 
-
 .nav-item .arrow.active {
-  color: #001f7f;
+  color: #022d62;
   transform: rotate(180deg);
 }
 
@@ -339,7 +335,7 @@
 /* Industries Section */
 .industries-dropdown {
   position: absolute;
-  top: 78px;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -361,7 +357,7 @@
 
 .industries-column {
   flex: 1;
-  padding: 0 20px;
+  padding: 0 13px;
 }
 
 .industries-column h2 {
@@ -379,26 +375,21 @@
 
 .industries-column ul li {
   margin-bottom: 8px;
-  font-size: 1.em;
+  font-size: 1em;
   font-family: "BauhausStd-Light";
+  color: #022d62;
 }
 
 .industries-all {
- display: flex;
- flex-direction: row;
- justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 .industries-button {
-  color: #001f7f;
+  color: #022d62;
   font-size: 1.4em;
   font-family: "Bauhaus";
 }
-
-.industries-button:hover {
-  background-color: #0053ba;
-}
-
-/* Mobile responsiveness */
 
 /* Hide navigation by default for mobile */
 @media (max-width: 768px) {
@@ -412,7 +403,12 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Optional: Add background for mobile view */
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.9
+    ); /* Optional: Add background for mobile view */
     position: absolute;
     top: 60px; /* Adjust this based on your header height */
     left: 0;
@@ -450,61 +446,53 @@
 .Services-dropdown {
   position: absolute;
   top: 60%;
-  left: 45%;
+  left: 41%;
   max-width: 400px !important;
   transform: translateX(-50%);
   background-color: white;
-  padding: 1vw;
+  padding: 2vw;
   border-radius: 1vw;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   z-index: 1000;
+  font-family: "BauhausStd-Light";
+  color: #022d62;
+}
+.Services-dropdown ul li {
+  margin-bottom: 8px;
+  font-size: 1em;
+  font-family: "BauhausStd-Light";
+  color: #022d62;
 }
 .Product-dropdown {
   position: absolute;
-  top: 78px;
-  left: 50%;
-  width: 100%;
-  max-width: 300px;
+  top: 60%;
+  max-width: 400px;
   transform: translateX(-50%);
   background-color: white;
-  padding: 20px;
+  padding: 1vw;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   z-index: 1000;
+  font-family: "BauhausStd-Light";
 }
 
-.Services-dropdown p,
-.Product-dropdown p {
-  padding-left: 12px;
-  font-size: 1.3em;
-  line-height: 1.3rem;
+.Product-dropdown ul li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-family: "BauhausStd-Light";
+  color: #022d62;
 }
-
-/* For larger screens */
-/* @media (min-width: 768px) {
-  .Product-dropdown,
-  .Services-dropdown {
-    width: 50%;
-  }
-} */
 
 @media (min-width: 1024px) {
   .Product-dropdown {
-    width: 17%;
-    left: 53%;
+    width: 23%;
+    left: 48%;
   }
 }
-/* @media (min-width: 1024px) {
-
-  .Services-dropdown {
-    width: 17%;
-    left: 45%;
-  }
-} */
 
 @media (max-width: 767px) {
   .Product-dropdown p,
@@ -516,7 +504,7 @@
 /* Partner Section */
 .popup-overlay {
   position: absolute;
-  top: 78px;
+  top: 60px;
   right: 28vw;
   width: 514px;
   height: 256px;
@@ -588,6 +576,6 @@
     max-width: 100px;
   }
 }
-.Industries-icon{
+.Industries-icon {
   width: 4vw;
 }

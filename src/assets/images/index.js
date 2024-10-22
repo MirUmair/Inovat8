@@ -47,6 +47,7 @@ import i36 from "./36.png";
 import i37 from "./37.png";
 import i38 from "./38.png";
 import i39 from "./39.png";
+import i42 from "./42.png";
 
 // Export images as an object
 export default {
@@ -76,6 +77,7 @@ export default {
   i37,
   i38,
   i39,
+  i42,
   icon1,
   icon2,
   icon3,

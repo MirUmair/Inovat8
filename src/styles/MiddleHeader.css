@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Bauhaus:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "BauhausStd-Light";
+  font-family: "Bauhaus";
+  src: url("../assets/fonts/BauhausStd-Light.ttf") format("truetype");
+  src: url("../assets/fonts/BauhausStd-Bold.ttf") format("truetype");
+  font-weight: 300;
+}
 /* Trusted By Section */
 .trusted-by {
   text-align: center;
@@ -30,8 +39,7 @@
 
 .offer-text {
   position: relative;
-
-  width: 40%;
+  width: 50%;
   background: linear-gradient(to right, #ffedbc, #f7c8d7);
   padding: 0 4vw 2vw;
 }
@@ -50,7 +58,7 @@
 }
 .offer-text h5 {
   font-family: "BauhausStd-Light";
-  font-size: 20px;
+  font-size: 30px;
   font-weight: lighter;
 }
 .offer-text span {
@@ -60,7 +68,8 @@
 }
 .offer-text p {
   color: #001d3d;
-  font-size: large;
+  font-size: 1.2em;
+  font-family: "BauhausStd-Light";
 }
 
 .text {
@@ -77,12 +86,12 @@
 
 .btnContainer {
   align-items: flex-end;
-  margin-left: 30vw;
+  margin-left: 77%;
 }
 
 .slider {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
 }
 
 .slide1 {
@@ -94,12 +103,6 @@
   right: 1vw;
 }
 
-/* .slide {
-  width: 10vw;
-  padding: 10px;
-  text-align: left;
-} */
-
 .slide h3 {
   font-size: 24px;
 
@@ -110,6 +113,7 @@
 
 .slide p {
   line-height: 1.6;
+  font-family: "BauhausStd-Light";
 }
 
 .view-services {
@@ -152,7 +156,7 @@ button:focus {
 
 /* General container for the slider and controls */
 .slider-wrapper {
-  width: 60%;
+  width: 50%;
 }
 
 /* Styling the control buttons to be outside the card */
@@ -162,19 +166,36 @@ button:focus {
   font-size: 30px;
   color: #ffffff;
   cursor: pointer;
-  padding: 10px;
+  padding: 1px;
   z-index: 10;
   transition: color 0.3s ease;
 }
 
 .control.prev {
-  border-width: 10rem;
-  border-color: #0b4b5c;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 26px;
+  margin: 1px 28px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 38px; /* Ensure width and height are equal */
+  height: 38px;
+  /* border-width: 1rem; */
 }
 
 .control.next {
-  border-width: 1rem;
-  border-color: #1cb5e0;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 1px 0px 10px 10px;
+  border-radius: 50%;
+  width: 38px; /* Ensure width and height are equal */
+  height: 38px;
 }
 
 .control:hover {
@@ -186,13 +207,6 @@ button:focus {
   transition: transform 0.5s ease;
 }
 
-.slide {
-  min-width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: left;
-}
-
 .slide h3 {
   color: #001d3d;
   font-weight: bold;
@@ -200,23 +214,12 @@ button:focus {
 
 .slide p {
   line-height: 1.6;
-  font-size: large;
+  font-size: 1.3em;
 }
 
 /* Styling for the hover state of the control buttons */
 button:focus {
   outline: none;
-}
-
-.offer-text a {
-  color: #001d3d;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.offer-text a:hover {
-  text-decoration: underline;
 }
 
 /* Slider for Service Cards */
@@ -272,11 +275,6 @@ button:focus {
   transition: transform 0.5s ease;
 }
 
-.slide {
-  min-width: 100%;
-  padding: 20px;
-}
-
 .btnContainer {
   display: flex;
   width: 10vw;
@@ -306,7 +304,6 @@ button:focus {
   /* Start hidden and slightly below */
 }
 
-
 /* Additional styling for Trusted By section */
 .trusted-logos img {
   width: 100px;
@@ -319,30 +316,33 @@ button:focus {
 
 /* Additional styling for What We Offer section */
 .slider-container {
+  padding-bottom: 8%;
   display: flex;
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
 
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 50%;
+  width: 83%;
 }
 
 .slide {
-  margin-left: 10%;
-  min-width: 100%;
+  margin-left: 5%;
+  min-width: 95%;
   box-sizing: border-box;
-  padding: 13px;
-  background: #F5F7FA;
+  padding: 20px;
+  background: #f5f7fa;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btnContainer {
   display: flex;
-  justify-content: space-between;
+  gap: 5px;
+  margin-top: 3%;
 }
 
 .service-card p {
@@ -355,29 +355,23 @@ button:focus {
 }
 @media (max-width: 768px) {
   .trusted-logos img {
-    width: 100px;  /* Reduce size for smaller screens */
+    width: 100px; /* Reduce size for smaller screens */
     margin: 5px;
   }
 }
 
 @media (max-width: 480px) {
   .trusted-logos img {
-    width: 100px;  
+    width: 100px;
     margin: 3px;
-
- 
   }
 }
 
 @media (max-width: 1024px) {
-  .slider-wrapper {
-    width: 90%;
-}
   .offer-section {
     flex-direction: column;
   }
 
-  .offer-text,
   .service-slider {
     width: 100%;
   }
@@ -385,7 +379,7 @@ button:focus {
   .service-slider {
     margin-top: 20px;
   }
-  .slide{
+  .slide {
     max-height: 500px;
   }
 }
@@ -398,9 +392,7 @@ button:focus {
 
 .trusted-logos img:hover {
   transform: scale(1.1);
-  
 }
-
 
 @media (max-width: 768px) {
   .trusted-logos {
@@ -418,16 +410,16 @@ button:focus {
   }
 }
 .trusted-logos-ticker {
-  width: 100%; 
-  overflow: hidden; 
-  background-color: white; 
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
 }
 
 .trusted-logos-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  animation: ticker 30s linear infinite; 
+  animation: ticker 30s linear infinite;
 }
 
 .trusted-logos-wrapper img {
@@ -442,43 +434,86 @@ button:focus {
     transform: translateX(0); /* Start from the beginning */
   }
   100% {
-    transform: translateX(-50%); /* Move logos half the width (since it's duplicated) */
+    transform: translateX(
+      -50%
+    ); /* Move logos half the width (since it's duplicated) */
   }
 }
-.background-iconmiddleheader, .background-iconmiddleheader1 {
+.background-iconmiddleheader,
+.background-iconmiddleheader1 {
   position: absolute;
- /* Make the background icon faint */
+  /* Make the background icon faint */
 }
 
 .background-iconmiddleheader {
   bottom: 27%;
-    left: 20px;
-    width: 66%;
+  left: 20px;
+  width: 66%;
 }
 .background-iconmiddleheader1 {
   top: 30%;
 
-left: 20px;
-    width: 66%;
+  left: 20px;
+  width: 66%;
 }
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  .offer-text{
+  .offer-text {
     width: 50%;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  .slider-wrapper {
-    width: 100% !important;
+  .offer-text {
+    width: 100%;
+  }
 }
-  .offer-text{
+@media only screen and (max-width: 1300px) {
+  .offer-text {
+    width: 40%;
+    padding: 0px 25px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .slider {
+    width: 92%;
+  }
+  .slider-wrapper {
     width: 100%;
   }
 }
 @media only screen and (max-width: 600px) {
   slider-wrapper {
     width: 100%;
+  }
+  .offer-text {
+    width: 88.5%;
+  }
 }
-  .offer-text{
+.div-services {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 861px) and (max-width: 1440px) {
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 92%;
+  }
+  /* .innovation-section{
+  display: flex;
+  flex-direction: column;
+} */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .innovation-section {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .offer-text {
+    width: 94.5%;
+  }
+  .slider-wrapper {
     width: 100%;
   }
 }

@@ -4,6 +4,15 @@ import "../../styles/MiddleHeader.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import images from "../../assets/images";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronDown,
+  faChevronUp,
+  faArrowAltCircleLeft,
+  faArrowCircleLeft,
+  faArrowCircleRight,
+} from "@fortawesome/free-solid-svg-icons";
+
 const HeaderPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef(null);
@@ -32,21 +41,70 @@ const HeaderPage = () => {
   const updateSliderPosition = () => {
     if (sliderRef.current) {
       const slideWidth = sliderRef.current.clientWidth;
+
+      // Add smooth transition for the normal slides
+      sliderRef.current.style.transition = "transform 0.5s ease-in-out";
+      // Move the slider according to the currentIndex (account for cloned slides)
       sliderRef.current.style.transform = `translateX(-${
-        currentIndex * slideWidth
-      }px)`;
+        (currentIndex + 1) * slideWidth
+      }px)`; // Adding +1 to account for the cloned first slide
     }
   };
-  useEffect(() => {
-    updateSliderPosition();
-  }, [currentIndex]);
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+
+  // Clone the first and last slides for the infinite loop
+  const slidesWithClones = [
+    slides[slides.length - 1], // Clone of the last slide
+    ...slides, // All original slides
+    slides[0], // Clone of the first slide
+  ];
+
+  const handleTransitionEnd = () => {
+    if (currentIndex === slides.length) {
+      // If we've transitioned to the cloned first slide, reset instantly to the real first slide
+      sliderRef.current.style.transition = "none"; // Temporarily disable the transition
+      setCurrentIndex(0); // Set the real first slide as the current index
+      sliderRef.current.style.transform = `translateX(-${sliderRef.current.clientWidth}px)`; // Move to the real first slide position
+    } else if (currentIndex === -1) {
+      // If we've transitioned to the cloned last slide, reset to the real last slide
+      sliderRef.current.style.transition = "none"; // Temporarily disable the transition
+      setCurrentIndex(slides.length - 1); // Move to the real last slide
+      sliderRef.current.style.transform = `translateX(-${
+        slides.length * sliderRef.current.clientWidth
+      }px)`; // Move to the real last slide position
+    }
   };
+
+  // useEffect to handle slide position updates and reset behavior
+  useEffect(() => {
+    const slider = sliderRef.current;
+    slider.addEventListener("transitionend", handleTransitionEnd);
+    updateSliderPosition();
+
+    return () => {
+      slider.removeEventListener("transitionend", handleTransitionEnd); // Cleanup listener
+    };
+  }, [currentIndex]);
+
+  // Moving to the next slide
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => {
+      if (prevIndex >= slides.length - 1) {
+        return slides.length; // Set index beyond the last slide temporarily
+      }
+      return (prevIndex + 1) % slides.length;
+    });
+  };
+
+  // Moving to the previous slide
   const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
-    );
+    setCurrentIndex((prevIndex) => {
+      if (prevIndex === 0) {
+        // If we're on the first slide, temporarily go to the clone of the last slide
+        return -1; // Set index beyond the first slide temporarily (clone of last)
+      }
+      // Otherwise, move to the previous slide
+      return (prevIndex - 1 + slides.length) % slides.length;
+    });
   };
   // Using useInView hook to trigger animation for Trusted By section
   const { ref: trustedByRef, inView: trustedByInView } = useInView({
@@ -300,42 +358,49 @@ const HeaderPage = () => {
             <br />
             support throughout the project's lifecycle.
           </p>
-          <a href="#" className="view-services">
-            <h5>
-              View All<span>Services &gt;</span>
-            </h5>
-          </a>
+          <div className="div-services">
+            <a href="#" className="view-services">
+              <h5>
+                View All<span>Services</span>
+              </h5>
+            </a>
+            <img
+              src={images.i22}
+              style={{
+                width: "50px",
+                height: "50px",
+                marginTop: "5px",
+                marginLeft: "5px",
+              }}
+            />
+          </div>
         </div>
         <div className="slider-wrapper">
           <div className="btnContainer">
-            <button className="control prev" onClick={prevSlide}>
+            <FontAwesomeIcon
+              className="control prev"
+              onClick={prevSlide}
+              color="#fff"
+              size={"2xl"}
+              icon={faArrowCircleLeft}
+            />
+            <FontAwesomeIcon
+              size={"2xl"}
+              className="control next"
+              onClick={nextSlide}
+              color="#fff"
+              icon={faArrowCircleRight}
+            />
+            {/* <button className="control prev" onClick={prevSlide}>
               ❮
-            </button>
-            <button className="control next" onClick={nextSlide}>
+            </button> */}
+            {/* <button className="control next" onClick={nextSlide}>
               ❯
-            </button>
+            </button> */}
           </div>
-          //////////////////////////
-          {/* <div className="slider-container">
-      <button className="prev" onClick={prevSlide}>
-        &lt;
-      </button>
-      <div className="slider" style={{ transform: `translateX(-${currentIndex * 100}vw)` }}>
-        {slides.map((slide, index) => (
-          <div className="slide" key={index}>
-            <h3>{slide.title}</h3>
-            <p>{slide.content}</p>
-          </div>
-        ))}
-      </div>
-      <button className="next" onClick={nextSlide}>
-        &gt;
-      </button>
-    </div>
-          /////////////////////////      */}
           <div className="slider-container">
             <div className="slider" ref={sliderRef}>
-              {slides.map((slide, index) => (
+              {slidesWithClones.map((slide, index) => (
                 <div className="slide" key={index}>
                   <h3>{slide.title}</h3>
                   <p>{slide.description}</p>

@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Bauhaus:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "BauhausStd-Light";
+  font-family: "Bauhaus";
+  src: url("../assets/fonts/BauhausStd-Light.ttf") format("truetype");
+  src: url("../assets/fonts/BauhausStd-Bold.ttf") format("truetype");
+  font-weight: 300;
+}
 .project-page-container {
   padding: 20px;
   font-family: "Arial", sans-serif;
@@ -6,6 +15,7 @@
   padding-left: 3%;
   padding-right: 3%;
   box-shadow: 5px 5px 10px rgb(230, 240, 244) inset;
+  width: 100%;
 }
 
 .page-header {
@@ -14,12 +24,12 @@
 
 .page-header h1 {
   color: #022d62;
-  font-size: 2vw;
+  font-size: 40px;
   margin-bottom: 10px;
 }
 
 .page-header h2 {
-  font-size: 30px;
+  font-size: 35px;
   margin-top: 10px;
   margin-left: 4%;
   color: #022d62;
@@ -27,8 +37,10 @@
 }
 
 .page-header p {
-  font-size: 1.1vw;
+  font-size: 1.5rem;
   margin-left: 4%;
+  color: #022d62;
+  font-family: "BauhausStd-Light";
 }
 
 .journey-section {
@@ -37,11 +49,14 @@
   color: #022d62;
   margin-left: 4%;
 }
+.journey-section h3 {
+  font-size: 1.8rem;
+}
 
 .journey-buttons {
   display: flex;
   justify-content: flex-start;
-  gap: 15px;
+  gap: 50px;
   margin-top: 20px;
 }
 
@@ -49,7 +64,7 @@
   border-radius: 30px;
   border: 2px solid #888;
   background: transparent;
-  padding: 0.7vw 2.08vw;
+  padding: 0.9vw 2.08vw;
   font-size: 0.9vw;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -81,28 +96,30 @@
   background: #022d62;
   font-family: "Bauhaus";
   color: white;
-  font-size: 15px;
+  font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
   display: block;
-  margin-top: 20px;
+  width: 123px;
+  height: 50px;
 }
 
 .call-details {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  height: 40vh;
 }
 
 .icon {
-  width: 3.05vw;
-  height: 3.05vw;
+  width: 7.05vw;
+  height: 7.05vw;
   margin-right: 0.7vw;
-  
 }
 @media only screen and (max-width: 1024px) {
   .icon {
-    width: 8.05vw;
-    height: 8.05vw;
+    width: 9.05vw;
+    height: 9.05vw;
   }
 }
 
@@ -110,14 +127,18 @@
   flex: 1;
   display: flex;
   text-align: left;
-  margin-bottom: 20px;
 }
 
-.detail-box1 {
-  flex: 1;
-  text-align: left;
+.detail-box {
+  flex: 5%;
 }
-
+.detailbox11 {
+  gap: 20px;
+  display: flex;
+  padding: 10px;
+  flex: 74%;
+  flex-wrap: wrap;
+}
 .detail-box p {
   display: flex;
   font-weight: bold;
@@ -125,20 +146,20 @@
   color: #022d62;
 }
 
-.detail-box1 p {
-  display: flex;
+.detail-box p {
   font-family: "Bauhaus";
-  font-size: large;
+  font-size: 1.8rem;
 }
 
 .detail-box div p {
   margin: 0;
   font-family: "Bauhaus";
-  font-size: large;
+  font-size: 2em;
 }
 
 .detail-box div span {
   margin-top: 0.6vw;
+  font-family: "BauhausStd-Light";
 }
 
 .detail-box div {
@@ -147,16 +168,17 @@
 
 .detail-box span {
   display: block;
-  font-size: 0.97vw;
+  font-size: 1.3rem;
   color: #022d62;
 }
 .detail-box .icon {
   margin-right: 10px;
-  margin-top: 0.9vw;
+  margin-top: 0.6vw;
+  width: 70px;
+  height: 70px;
 }
 /* Media queries for responsiveness */
 @media only screen and (max-width: 1200px) {
-  .detail-box1 p, 
   .detail-box div p {
     font-size: 1.5rem; /* Adjust font size for medium screens */
   }
@@ -164,25 +186,25 @@
     margin-top: 2vw; /* Increase spacing for medium screens */
   }
   .detail-box span {
-    font-size: 1.2rem; /* Adjust font size for medium screens */
+    font-size: 1.3rem; /* Adjust font size for medium screens */
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .detail-box1 p, 
+  .detail-box p,
   .detail-box div p {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
   }
   .detail-box div {
     margin-top: 2.5vw; /* Increase spacing for smaller screens */
   }
   .detail-box span {
-    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-size: 1.3rem; /* Adjust font size for smaller screens */
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .detail-box1 p, 
+  .detail-box p,
   .detail-box div p {
     font-size: 1rem; /* Adjust font size for mobile devices */
     flex-direction: column; /* Stack elements vertically for small screens */
@@ -192,13 +214,18 @@
   }
   .detail-box span {
     margin-top: 1vw;
-    font-size: 0.9rem; /* Adjust font size for mobile devices */
+    font-size: 1.3rem; /* Adjust font size for mobile devices */
+  }
+  .talk-button {
+    width: 80px;
+    height: 35px;
+    font-size: 0.5rem;
   }
 }
 @media only screen and (max-width: 1200px) {
   .detail-box .icon {
     margin-right: 10px; /* Adjust margin for medium screens */
-  
+
     margin-bottom: 0.2vw;
   }
 }
@@ -212,15 +239,16 @@
 
 @media only screen and (max-width: 480px) {
   .detail-box .icon {
+    width: 40px;
+    height: 40px;
     margin-right: 4px; /* Adjust margin for mobile devices */
-    margin-top: 3vw;   /* Adjust top margin for mobile devices */
+    margin-top: 0.5vw; /* Adjust top margin for mobile devices */
   }
 }
 
-
-
 .detail-box:first-child {
-  margin-left: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .detail-box:last-child {
@@ -285,11 +313,6 @@
     padding: 8px 20px;
     font-size: 14px;
   }
-.discovery-content{
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
-}
   .discovery-call {
     margin-left: 2%;
     margin-right: 2%;
@@ -297,14 +320,7 @@
 
   .call-details {
     flex-direction: row;
-    /* align-items: center; */
     flex-wrap: wrap;
-  }
-
-  .detail-box {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 
   .icon {
@@ -330,13 +346,8 @@
     font-size: 12px;
   }
 
-  .talk-button {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
   .detail-box span {
-    font-size: 12px;
+    font-size: 1.3rem;
   }
 }
 
@@ -370,25 +381,16 @@
     margin-right: 0;
   }
 
-  .talk-button {
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-
   .detail-box p {
-    font-size: 12px;
-  }
-
-  .detail-box1 p {
-    font-size: 14px;
+    font-size: 0.8rem;
   }
 
   .detail-box span {
-    font-size: 10px;
+    font-size: 0.8rem;
   }
 
   .icon {
-    width: 36px;
-    height: 36px;
+    width: 66px;
+    height: 66px;
   }
 }
